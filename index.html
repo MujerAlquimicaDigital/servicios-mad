@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mujer Alquímica Digital — Alquimia de Marcas, Consultoría e Implementación</title>
+<meta name="description" content="Tres caminos para construir, destrabar o implementar tu negocio digital desde quién eres: Alquimia de Marcas, Consultoría e Implementación. Con Mimi y Ale." />
+<meta name="theme-color" content="#0f1a24" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="assets/icono-mad.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Prata&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --azul:#263549; --azul-dk:#0f1a24; --azul-md:#1a2738;
+  --oro:#F7D795; --oro-md:#d4b87e; --oro-dk:#a18348;
+  --verde:#97A585; --verde-dk:#6f7e5f;
+  --terracota:#B85C34;
+  --crema:#f4ecd9; --crema-2:#e9ddc3; --blanco:#fdfaf5;
+  --serif:'Prata',Georgia,serif; --sans:'Raleway',system-ui,sans-serif; --mono:'Courier Prime',monospace;
+  --wrap:1180px; --gut:clamp(20px,5vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--sans);background:var(--blanco);color:var(--azul);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut);position:relative}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terracota)}
+.dark .eyebrow{color:var(--oro-md)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12}
+h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:.5rem 0 1rem}
+.lead{font-size:clamp(1.02rem,1.5vw,1.18rem);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.7rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;letter-spacing:.02em;border:1.5px solid transparent;cursor:pointer;transition:transform .25s,background .25s,color .25s,border-color .25s;font-family:var(--sans)}
+.btn:hover{transform:translateY(-2px)}
+.btn-oro{background:var(--oro);color:var(--azul-dk)}
+.btn-oro:hover{background:#fbe4b0}
+.btn-line{border-color:rgba(247,215,149,.6);color:var(--oro)}
+.btn-line:hover{background:rgba(247,215,149,.12)}
+.btn-azul{background:var(--azul);color:var(--crema)}
+.btn-azul:hover{background:var(--azul-dk)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* borde de papel rasgado: cada sección pinta su borde superior sobre la anterior */
+.torn{position:relative}
+.torn::before{content:'';position:absolute;left:0;right:0;top:1px;height:26px;transform:translateY(-100%);background:var(--edge,var(--crema));
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 26' preserveAspectRatio='none'%3E%3Cpath d='M0 26V15l14-4 16 5 18-9 17 6 20-7 16 8 22-5 19 6 21-8 18 7 24-4 15 5v15z'/%3E%3C/svg%3E") repeat-x bottom/260px 26px;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 26' preserveAspectRatio='none'%3E%3Cpath d='M0 26V15l14-4 16 5 18-9 17 6 20-7 16 8 22-5 19 6 21-8 18 7 24-4 15 5v15z'/%3E%3C/svg%3E") repeat-x bottom/260px 26px;z-index:3}
+
+/* cinta washi */
+.tape{position:absolute;width:96px;height:26px;background:rgba(247,215,149,.78);top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg);z-index:4;
+  box-shadow:0 1px 2px rgba(0,0,0,.12);clip-path:polygon(0 8%,4% 0,8% 10%,12% 0,100% 0,96% 50%,100% 100%,12% 100%,8% 90%,4% 100%,0 92%,3% 50%)}
+.tape.terra{background:rgba(184,92,52,.72)}
+.tape.verde{background:rgba(151,165,133,.85)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
+.nav.solid{background:rgba(15,26,36,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(247,215,149,.15);padding:10px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--crema)}
+.brand img{height:46px;width:auto}
+.brand span{font-family:var(--serif);font-size:1.05rem;line-height:1.1;white-space:nowrap}
+.brand small{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--oro-md);text-transform:uppercase}
+.links{display:flex;gap:clamp(16px,2vw,28px);align-items:center;white-space:nowrap}
+.links a{color:var(--crema);text-decoration:none;font-size:.86rem;letter-spacing:.06em;position:relative;padding:4px 0}
+.links a:not(.btn)::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--oro);transition:width .3s}
+.links a:not(.btn):hover::after,.links a.on::after{width:100%}
+.links .btn{padding:.6rem 1.2rem;font-size:.82rem;color:var(--azul-dk)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative;z-index:5}
+.burger i{position:absolute;left:10px;right:10px;height:2px;background:var(--crema);transition:.3s}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:22px}.burger i:nth-child(3){top:28px}
+.burger.open i:nth-child(1){top:22px;transform:rotate(45deg)}.burger.open i:nth-child(2){opacity:0}.burger.open i:nth-child(3){top:22px;transform:rotate(-45deg)}
+
+/* HERO */
+.hero{background:radial-gradient(ellipse at 75% 30%,#2b3d55 0%,var(--azul-dk) 65%);color:var(--crema);padding:118px 0 0;position:relative;z-index:4;overflow:visible}
+.hero::after{content:'';position:absolute;inset:0;background:url('assets/icono-mad.png') no-repeat 92% 12%/min(520px,60vw);opacity:.045;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,72px);align-items:end}
+.hero-copy{padding-bottom:clamp(110px,12vw,170px)}
+.hero h1{font-size:clamp(2.4rem,4.9vw,4.2rem);margin:1rem 0 1.2rem;color:var(--crema)}
+.hero h1 em{font-style:normal;color:var(--oro)}
+.hero p.lead{color:rgba(244,236,217,.82);margin-bottom:2rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-photo{position:relative;margin-bottom:calc(-1 * clamp(70px,10vw,140px));z-index:5;justify-self:center;width:min(100%,460px)}
+.hero-photo .frame{background:var(--blanco);padding:14px 14px 58px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);transform:rotate(2.2deg);position:relative}
+.hero-photo img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.hero-photo .cap{position:absolute;left:0;right:0;bottom:14px;text-align:center;font-family:var(--mono);font-size:1rem;color:var(--azul);font-style:italic}
+.sello{position:absolute;right:-18px;top:-26px;width:112px;height:112px;border-radius:50%;background:var(--terracota);color:var(--crema);display:grid;place-items:center;text-align:center;font-family:var(--mono);font-size:.7rem;line-height:1.25;letter-spacing:.08em;text-transform:uppercase;transform:rotate(12deg);box-shadow:0 10px 24px -8px rgba(0,0,0,.5);z-index:6;padding:12px;border:2px dashed rgba(244,236,217,.5);outline:4px solid var(--terracota)}
+.scroll-hint{position:absolute;left:var(--gut);bottom:26px;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-md);display:flex;align-items:center;gap:10px}
+.scroll-hint::after{content:'';width:1px;height:34px;background:var(--oro-md);animation:drip 2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* QUIÉNES SOMOS */
+.about{--edge:var(--crema);background:var(--crema);padding:clamp(150px,17vw,230px) 0 clamp(150px,16vw,220px);position:relative;z-index:3}
+.about-intro{max-width:760px;margin-bottom:clamp(50px,7vw,90px)}
+.about-intro .lead{color:#3c4c5f}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.person{position:relative}
+.person:nth-child(2){margin-top:clamp(0px,7vw,90px)}
+.person .photo{position:relative;background:var(--blanco);padding:12px;box-shadow:0 22px 44px -22px rgba(38,53,73,.5);transform:rotate(-1.6deg);transition:transform .5s}
+.person:nth-child(2) .photo{transform:rotate(1.6deg)}
+.person:hover .photo{transform:rotate(0) scale(1.015)}
+.person .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%}
+.person .role{position:absolute;left:-10px;bottom:22px;background:var(--azul);color:var(--oro);font-family:var(--mono);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;padding:8px 16px;z-index:4;box-shadow:0 8px 16px -8px rgba(0,0,0,.4)}
+.person:nth-child(2) .role{left:auto;right:-10px;background:var(--terracota);color:var(--crema)}
+.person h3{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:26px 0 4px}
+.person .hello{font-family:var(--mono);font-style:italic;color:var(--terracota);margin-bottom:12px}
+.person p{color:#3c4c5f;margin-bottom:12px}
+.person ul{list-style:none;margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.person li{font-size:.76rem;letter-spacing:.06em;padding:6px 14px;border-radius:999px;border:1px solid rgba(38,53,73,.25);background:rgba(255,255,255,.5)}
+/* nota que se monta sobre la sección de servicios */
+.bridge{position:absolute;left:50%;bottom:0;transform:translate(-50%,50%) rotate(-1.2deg);width:min(92%,760px);background:var(--azul);color:var(--crema);padding:clamp(28px,4vw,46px) clamp(26px,5vw,60px);text-align:center;z-index:6;box-shadow:0 30px 60px -25px rgba(0,0,0,.6)}
+.bridge blockquote{font-family:var(--serif);font-size:clamp(1.25rem,2.8vw,2rem);line-height:1.3}
+.bridge blockquote em{font-style:normal;color:var(--oro)}
+.bridge cite{display:block;margin-top:14px;font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;color:var(--oro-md);font-style:normal;text-transform:uppercase}
+
+/* SERVICIOS */
+.services{--edge:var(--blanco);background:var(--blanco);padding:clamp(190px,20vw,270px) 0 clamp(80px,9vw,130px);position:relative;z-index:1}
+.services .head{max-width:720px;margin-bottom:56px}
+.flag{background:linear-gradient(150deg,var(--azul-dk),var(--azul) 70%);color:var(--crema);position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,56px);padding:clamp(30px,5vw,64px);margin-bottom:clamp(60px,7vw,100px);box-shadow:0 40px 70px -35px rgba(15,26,36,.7);overflow:hidden}
+.flag::before{content:'';position:absolute;right:-90px;top:-90px;width:340px;height:340px;background:url('assets/icono-mad.png') center/contain no-repeat;opacity:.07}
+.flag .tag{display:inline-block;background:var(--oro);color:var(--azul-dk);font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 14px;margin-bottom:18px}
+.flag h3{font-size:clamp(2.1rem,4.6vw,3.5rem);color:var(--oro);margin-bottom:14px}
+.flag p{color:rgba(244,236,217,.86);margin-bottom:14px}
+.flag .aside{border-left:1px solid rgba(247,215,149,.35);padding-left:clamp(20px,3vw,40px);display:flex;flex-direction:column;justify-content:center;gap:16px;position:relative}
+.flag .aside h4{font-family:var(--mono);font-weight:400;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-md)}
+.flag .aside ul{list-style:none;display:grid;gap:11px}
+.flag .aside li{padding-left:28px;position:relative;font-size:.97rem}
+.flag .aside li::before{content:'◆';position:absolute;left:0;color:var(--oro);font-size:.7rem;top:.4em}
+.flag .btn{align-self:flex-start;margin-top:10px}
+
+.finder{display:grid;grid-template-columns:auto 1fr;gap:18px 32px;align-items:center;background:var(--crema);padding:24px clamp(20px,3vw,36px);margin-bottom:48px;position:relative}
+.finder strong{font-family:var(--serif);font-weight:400;font-size:1.25rem}
+.finder .opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{font-family:var(--sans);font-size:.88rem;padding:10px 18px;border-radius:999px;border:1.5px solid var(--azul);background:transparent;color:var(--azul);cursor:pointer;transition:.25s}
+.opt:hover{background:var(--azul);color:var(--crema)}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.chip{font-family:var(--sans);font-size:.82rem;letter-spacing:.05em;padding:9px 18px;border-radius:999px;border:1px solid rgba(38,53,73,.3);background:none;cursor:pointer;color:var(--azul);transition:.25s}
+.chip:hover{border-color:var(--azul)}
+.chip.on{background:var(--azul);color:var(--oro);border-color:var(--azul)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid rgba(38,53,73,.12);padding:28px 26px 24px;position:relative;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s,border-color .35s,opacity .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 40px -24px rgba(38,53,73,.45);border-color:var(--oro-md)}
+.card.hide{display:none}
+.card.glow{animation:glow 2.4s ease}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(184,92,52,0)}20%,60%{box-shadow:0 0 0 6px rgba(184,92,52,.35)}}
+.card .num{font-family:var(--serif);font-size:2.6rem;color:var(--oro-md);line-height:1;margin-bottom:10px}
+.card .mod{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde-dk);margin-bottom:8px}
+.card h3{font-size:1.28rem;line-height:1.25;margin-bottom:12px}
+.card p{font-size:.94rem;color:#41526a;flex:1}
+.card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:16px;border-top:1px dashed rgba(38,53,73,.2);gap:10px}
+.who{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;display:flex;gap:6px;flex-wrap:wrap}
+.who b{font-weight:400;padding:3px 10px;border-radius:999px}
+.who .m{background:rgba(151,165,133,.3);color:#3f4e33}
+.who .a{background:rgba(184,92,52,.16);color:#8c3f1c}
+.card .go{font-size:.82rem;font-weight:600;text-decoration:none;color:var(--terracota);white-space:nowrap}
+.card .go:hover{text-decoration:underline}
+
+/* TESTIMONIOS */
+.testi{--edge:var(--azul-dk);background:var(--azul-dk);color:var(--crema);padding:clamp(80px,9vw,130px) 0;position:relative;z-index:1}
+.testi h2{color:var(--crema)}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);margin:48px 0 70px}
+.quote{background:var(--crema);color:var(--azul);padding:34px clamp(24px,3vw,40px) 30px;position:relative;display:grid;grid-template-columns:96px 1fr;gap:6px 22px;align-items:start}
+.quote:nth-child(1){transform:rotate(-.9deg)}.quote:nth-child(2){transform:rotate(.9deg);margin-top:26px}
+.quote img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--oro-md);grid-row:span 2}
+.quote p{font-family:var(--serif);font-size:1.12rem;line-height:1.5}
+.quote .by{grid-column:2;font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;color:var(--terracota)}
+.quote .by small{display:block;color:#5b6b7e;letter-spacing:.04em;margin-top:2px}
+.quote .big{position:absolute;right:20px;top:-6px;font-family:var(--serif);font-size:5.5rem;color:var(--oro-md);opacity:.55;line-height:1}
+.shots-title{font-family:var(--mono);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-md);margin-bottom:22px}
+.shots{display:flex;gap:22px;overflow-x:auto;padding:10px var(--gut) 26px;margin:0 calc(-1 * var(--gut));scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shots::-webkit-scrollbar{height:6px}.shots::-webkit-scrollbar-thumb{background:rgba(247,215,149,.4);border-radius:3px}
+.shot{flex:0 0 min(300px,78vw);scroll-snap-align:start;background:var(--crema);padding:12px 12px 16px;position:relative}
+.shot:nth-child(odd){transform:rotate(-1deg)}.shot:nth-child(even){transform:rotate(1deg)}
+.shot img{width:100%;height:340px;object-fit:cover;object-position:top}
+.shot span{display:block;margin-top:10px;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--azul)}
+.shot span i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}
+
+/* PROYECTOS */
+.work{--edge:var(--crema);background:var(--crema);padding:clamp(80px,9vw,130px) 0;position:relative;z-index:1}
+.work .head{max-width:680px;margin-bottom:50px}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:26px;align-items:start}
+.tile{background:#fff;padding:12px 12px 16px;position:relative;box-shadow:0 20px 40px -24px rgba(38,53,73,.5);cursor:zoom-in;transition:transform .4s,box-shadow .4s;border:0;text-align:left;font:inherit;color:inherit}
+.tile:hover{transform:rotate(0) translateY(-6px) !important;box-shadow:0 30px 50px -22px rgba(38,53,73,.6)}
+.tile img{width:100%;height:auto;aspect-ratio:var(--r,16/10);object-fit:cover}
+.tile .cap{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;gap:10px}
+.tile .cap b{font-family:var(--serif);font-weight:400;font-size:1.08rem}
+.tile .cap i{font-family:var(--mono);font-size:.78rem;color:var(--terracota);font-style:normal}
+.tile small{display:block;font-family:var(--mono);font-size:.72rem;color:#5b6b7e;margin-top:2px}
+.t1{grid-column:1/8;transform:rotate(-.6deg)}
+.t2{grid-column:8/13;transform:rotate(.8deg);margin-top:60px;--r:4/5}
+.t3{grid-column:1/6;transform:rotate(.7deg);--r:16/10}
+.t4{grid-column:6/13;transform:rotate(-.8deg);margin-top:30px}
+.t5{grid-column:1/6;--r:1/1;transform:rotate(-.5deg)}
+.t6{grid-column:6/13;transform:rotate(.6deg);margin-top:50px;--r:3/2}
+.t2 img,.t5 img{object-position:top}
+.t6 img{object-fit:contain;background:var(--azul-dk)}
+.lb{position:fixed;inset:0;background:rgba(10,18,26,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:92vh;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb button{position:absolute;top:16px;right:20px;background:none;border:0;color:var(--crema);font-size:2.4rem;cursor:pointer;line-height:1}
+
+/* CIERRE */
+.close{--edge:var(--azul-dk);background:radial-gradient(ellipse at 20% 100%,#2b3d55,var(--azul-dk) 70%);color:var(--crema);padding:clamp(90px,10vw,150px) 0 90px;position:relative;text-align:center;overflow:hidden;z-index:1}
+.close h2{color:var(--crema);max-width:16ch;margin:1rem auto}
+.close h2 em{font-style:normal;color:var(--oro)}
+.close .lead{margin:0 auto 2rem;color:rgba(244,236,217,.82)}
+.close .polas{display:flex;justify-content:center;gap:0;margin-bottom:46px}
+.pola{width:min(190px,32vw);background:var(--blanco);padding:8px 8px 30px;box-shadow:0 20px 40px -14px rgba(0,0,0,.6);position:relative}
+.pola img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.pola:nth-child(1){transform:rotate(-7deg) translateX(14px)}.pola:nth-child(2){transform:rotate(3deg);z-index:2;margin-top:-14px}.pola:nth-child(3){transform:rotate(8deg) translateX(-14px)}
+.social{margin-top:40px;font-family:var(--mono);font-size:.86rem;letter-spacing:.1em;color:var(--oro-md)}
+.social a{margin:0 10px;text-decoration:none;border-bottom:1px solid rgba(212,184,126,.4)}
+footer{background:var(--azul-dk);color:rgba(244,236,217,.55);text-align:center;font-size:.78rem;padding:0 var(--gut) 40px;letter-spacing:.05em}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:90;width:58px;height:58px;border-radius:50%;background:var(--oro);color:var(--azul-dk);display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(0,0,0,.5);transition:transform .25s,opacity .3s;opacity:0;pointer-events:none}
+.wa-float.show{opacity:1;pointer-events:auto}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:28px;height:28px}
+
+/* animaciones de entrada (solo si hay JS) */
+.js .rv{opacity:0;translate:0 28px;transition:opacity .9s ease,translate .9s ease,transform .5s}
+.js .rv.in{opacity:1;translate:0 0}
+.js .rv.d1{transition-delay:.12s}.js .rv.d2{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;translate:none;transition:none}html{scroll-behavior:auto}.scroll-hint::after{animation:none}}
+
+/* TABLET / MÓVIL */
+@media (max-width:980px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .flag{grid-template-columns:1fr}
+  .flag .aside{border-left:0;border-top:1px solid rgba(247,215,149,.35);padding:24px 0 0}
+}
+@media (max-width:820px){
+  .burger{display:block}
+  .links{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:var(--azul-dk);flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding:40px 32px;transform:translateX(100%);transition:transform .4s;z-index:4}
+  .links.open{transform:none;box-shadow:-20px 0 60px rgba(0,0,0,.5)}
+  .links a{font-size:1.1rem}
+  .brand span small{display:none}
+  .hero{padding-top:110px}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-copy{padding-bottom:20px}
+  .hero-photo{width:min(84%,360px);margin-bottom:-90px}
+  .sello{width:92px;height:92px;font-size:.6rem;right:-8px}
+  .scroll-hint{display:none}
+  .about{padding-top:140px}
+  .duo{grid-template-columns:1fr}
+  .person:nth-child(2){margin-top:30px}
+  .qgrid{grid-template-columns:1fr}
+  .quote{grid-template-columns:72px 1fr}
+  .quote img{width:72px;height:72px}
+  .quote:nth-child(2){margin-top:0}
+  .finder{grid-template-columns:1fr}
+  .mosaic{grid-template-columns:1fr;gap:34px}
+  .tile{grid-column:1/-1 !important;margin-top:0 !important}
+}
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .about{padding-bottom:170px}
+  .services{padding-top:230px}
+  .bridge{width:calc(100% - 2*var(--gut))}
+  .chips{flex-wrap:nowrap;overflow-x:auto;margin:0 calc(-1 * var(--gut)) 30px;padding:0 var(--gut) 8px;scrollbar-width:none}
+  .chip{white-space:nowrap;flex:none}
+  .hero-cta .btn{width:100%;justify-content:center}
+}
+
+/* ===== v2: TRES CAMINOS ===== */
+.narrow{max-width:820px}
+.head{max-width:760px;margin-bottom:56px}
+.num-lbl{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px;color:var(--terracota)}
+.flag .num-lbl{color:var(--oro-md)}
+.flag .para{font-family:var(--mono);font-size:.82rem;letter-spacing:.04em;color:var(--oro-md);margin-bottom:18px}
+.flag .pasa{font-style:italic;font-size:1.05rem;border-left:2px solid var(--oro);padding-left:16px;margin:0 0 20px;color:rgba(244,236,217,.95)}
+.flag .promesa{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.55rem);line-height:1.35;color:var(--crema);margin-bottom:16px}
+.flag .mas{display:inline-block;margin:18px 0 0 22px;font-size:.88rem;color:var(--oro);text-decoration:none;border-bottom:1px solid rgba(247,215,149,.4)}
+.pduo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px);align-items:stretch}
+.pcard{background:#fff;border:1px solid rgba(38,53,73,.14);padding:clamp(26px,3.4vw,42px);display:flex;flex-direction:column;position:relative;transition:box-shadow .35s,border-color .35s,transform .35s}
+.pcard:hover{box-shadow:0 26px 44px -26px rgba(38,53,73,.45);border-color:var(--oro-md)}
+.pcard h3{font-size:clamp(1.8rem,3vw,2.3rem);margin-bottom:6px}
+.pcard .mod{font-family:var(--mono);font-size:.76rem;letter-spacing:.05em;color:var(--verde-dk);margin-bottom:14px}
+.pcard .para{font-size:.92rem;color:#5b6b7e;margin-bottom:16px}
+.pcard .pasa{font-style:italic;border-left:2px solid var(--oro-md);padding-left:14px;margin-bottom:16px;color:#41526a}
+.pcard .promesa{font-family:var(--serif);font-size:1.2rem;line-height:1.4;margin-bottom:14px}
+.pcard>p{font-size:.96rem;color:#41526a;margin-bottom:12px}
+.pcard h4{font-family:var(--mono);font-weight:400;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--terracota);margin:14px 0 10px}
+.pcard ul{list-style:none;display:grid;gap:9px;margin-bottom:18px}
+.pcard li{padding-left:24px;position:relative;font-size:.94rem;color:#41526a}
+.pcard li::before{content:'◆';position:absolute;left:0;top:.35em;font-size:.62rem;color:var(--oro-dk)}
+.pcard .nota{font-style:italic;font-size:.9rem;color:#5b6b7e;margin-bottom:22px}
+.pcard .btn{margin-top:auto;align-self:flex-start}
+
+.alq{--edge:var(--crema);background:var(--crema);padding:clamp(80px,9vw,130px) 0;position:relative;z-index:1}
+.steps{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:26px clamp(24px,4vw,56px);margin-bottom:64px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start}
+.steps .n{width:52px;height:52px;border-radius:50%;background:var(--azul);color:var(--oro);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem}
+.steps h4{font-family:var(--serif);font-weight:400;font-size:1.2rem;margin:4px 0 6px}
+.steps p{font-size:.95rem;color:#41526a}
+.formato{background:var(--azul);color:var(--crema);padding:clamp(26px,4vw,48px);margin-bottom:40px;position:relative}
+.formato h3{font-size:1.6rem;color:var(--oro);margin-bottom:18px}
+.formato .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px)}
+.formato b{display:block;font-weight:600;margin-bottom:6px}
+.formato p{font-size:.95rem;color:rgba(244,236,217,.85)}
+.recibes{background:#fff;padding:clamp(26px,4vw,48px);margin-bottom:40px;border:1px solid rgba(38,53,73,.12)}
+.recibes h3{font-size:1.6rem;margin-bottom:18px}
+.recibes ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 36px}
+.recibes li{padding-left:26px;position:relative;font-size:.96rem}
+.recibes li::before{content:'✓';position:absolute;left:0;color:var(--verde-dk);font-weight:700}
+.recibes .foot{font-size:.82rem;color:#5b6b7e;margin-top:18px}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px);margin-bottom:46px}
+.fit>div{padding:clamp(24px,3.4vw,40px)}
+.fit h3{font-size:1.5rem;margin-bottom:14px}
+.fit ul{list-style:none;display:grid;gap:11px}
+.fit li{padding-left:24px;position:relative;font-size:.95rem}
+.fit .si{background:rgba(151,165,133,.22)}
+.fit .si li::before{content:'✓';position:absolute;left:0;color:var(--verde-dk);font-weight:700}
+.fit .no{background:rgba(184,92,52,.1)}
+.fit .no li::before{content:'—';position:absolute;left:0;color:var(--terracota);font-weight:700}
+.cta-c{text-align:center}
+
+.empezar{--edge:var(--blanco);background:var(--blanco);padding:clamp(80px,9vw,130px) 0;position:relative;z-index:1}
+.jornada{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin-bottom:52px;position:relative}
+.jornada li{border-top:2px solid var(--oro-md);padding-top:18px}
+.jornada .n{font-family:var(--serif);font-size:2.2rem;color:var(--oro-md);display:block;line-height:1;margin-bottom:12px}
+.jornada h4{font-family:var(--serif);font-weight:400;font-size:1.15rem;margin-bottom:8px}
+.jornada p{font-size:.92rem;color:#41526a}
+
+.faq-s{--edge:var(--crema);background:var(--crema);padding:clamp(80px,9vw,120px) 0;position:relative;z-index:1}
+.faqs{margin-top:34px;border-top:1px solid rgba(38,53,73,.2)}
+.faqs details{border-bottom:1px solid rgba(38,53,73,.2)}
+.faqs summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-family:var(--serif);font-size:1.18rem;position:relative}
+.faqs summary::-webkit-details-marker{display:none}
+.faqs summary::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--terracota);transition:transform .3s}
+.faqs details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faqs details p{padding:0 0 22px;color:#41526a;max-width:62ch}
+.close .social a[data-wa]{color:var(--oro)}
+
+@media (max-width:980px){
+  .pduo{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .jornada{grid-template-columns:1fr 1fr}
+  .recibes ul{grid-template-columns:1fr}
+  .formato .cols,.fit{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .jornada{grid-template-columns:1fr}
+  .flag .mas{display:block;margin:16px 0 0}
+  .pcard .btn{width:100%;justify-content:center}
+  .flag .btn{width:100%;justify-content:center}
+}
+
+/* FORMULARIO DE APLICACIÓN */
+.ap{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(10,18,26,.82);backdrop-filter:blur(6px)}
+.ap.on{display:flex}
+.ap-box{background:var(--crema);color:var(--azul);width:min(620px,100%);max-height:92vh;overflow-y:auto;position:relative;padding:clamp(28px,5vw,48px);box-shadow:0 40px 90px -20px rgba(0,0,0,.7);animation:apin .45s ease}
+@keyframes apin{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.ap-box .tape{top:-13px}
+.ap-x{position:absolute;top:10px;right:14px;background:none;border:0;font-size:2rem;line-height:1;cursor:pointer;color:var(--azul);padding:6px 10px}
+.ap-box h3{font-size:clamp(1.6rem,3.4vw,2.1rem);margin:.4rem 0 .5rem}
+.ap-box .sub{font-size:.95rem;color:#41526a;margin-bottom:22px}
+.ap-box label{display:block;font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota);margin:16px 0 4px}
+.ap-box input,.ap-box select,.ap-box textarea{width:100%;font:inherit;font-size:1rem;color:var(--azul);background:transparent;border:0;border-bottom:1.5px solid rgba(38,53,73,.35);padding:8px 2px;border-radius:0;outline:none;transition:border-color .25s}
+.ap-box textarea{min-height:92px;resize:vertical;border:1.5px solid rgba(38,53,73,.35);padding:10px;background:rgba(255,255,255,.45)}
+.ap-box input:focus,.ap-box select:focus,.ap-box textarea:focus{border-color:var(--terracota)}
+.ap-box .row2{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+.ap-box .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.ap-box .legal{font-size:.78rem;color:#5b6b7e;margin:18px 0 20px;line-height:1.5}
+.ap-box .btn{width:100%;justify-content:center}
+.ap-box .btn[disabled]{opacity:.6;cursor:wait;transform:none}
+.ap-err{color:#9a2f12;font-size:.88rem;margin-top:12px;display:none}
+.ap-ok{text-align:center;padding:14px 0 6px;display:none}
+.ap-ok h3{margin-bottom:12px}
+.ap-ok .btn{margin-top:18px}
+.ap-demo{display:none;margin-top:14px;font-family:var(--mono);font-size:.72rem;color:#8a6d2a;text-align:center}
+@media (max-width:600px){
+  .ap{padding:0;align-items:flex-end}
+  .ap-box{max-height:94vh;width:100%}
+  .ap-box .row2{grid-template-columns:1fr}
+}
+/* =====================================================
+   v3 · LUJO SERENO
+   Sin cintas, sin inclinaciones, sin papel rasgado. Líneas rectas, aire y la textura de hojas.
+   Terracota solo en detalles (representa la sexualidad sagrada femenina).
+   ===================================================== */
+:root{--mono:'Raleway',system-ui,sans-serif}
+body{font-weight:400}
+
+/* fuera el estilo álbum de recortes */
+.tape{display:none !important}
+.torn::before{display:none !important}
+.polas{display:none !important}
+
+/* etiquetas: Raleway en mayúsculas espaciadas (Courier Prime queda para frases destacadas) */
+.eyebrow,.num-lbl,.mod,.flag .para,.flag .tag,.person .role,.shots-title,.shot span,.social,
+.scroll-hint,.brand small,.bridge cite,.quote .by,.tile .cap i,.tile small,.hero-photo .cap,
+.ap-box label,.formato b,.pcard h4,.flag .aside h4,.cap{font-family:var(--sans);font-weight:600}
+.eyebrow{font-size:.72rem;letter-spacing:.28em}
+.num-lbl{font-size:.7rem;letter-spacing:.26em;font-weight:600}
+.person .hello{font-family:'Courier Prime',monospace;font-weight:400;letter-spacing:.02em}
+
+/* títulos con más presencia y un detalle terracota */
+h2{font-size:clamp(2.2rem,4.6vw,3.5rem);letter-spacing:-.01em;line-height:1.1}
+.head h2::after,.about-intro h2::after,.close h2::after{content:'';display:block;width:54px;height:2px;background:var(--terracota);margin-top:22px}
+.close h2::after{margin-left:auto;margin-right:auto}
+.lead{line-height:1.8}
+
+/* botones más sobrios */
+.btn{border-radius:2px;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;font-weight:600;padding:1.05rem 1.9rem}
+.btn-azul:hover{background:var(--terracota);color:var(--crema)}
+.btn-oro:hover{background:#fff}
+.nav .links .btn{border-radius:2px;font-size:.72rem;padding:.7rem 1.3rem}
+
+/* textura de hojas, muy suave */
+.hojas{position:relative;isolation:isolate}
+.hojas::before{content:'';position:absolute;inset:0;z-index:-1;background:url('assets/hojas.jpg') center/cover no-repeat;opacity:.34;mix-blend-mode:soft-light;pointer-events:none}
+.hero::after{display:none}
+.hero{background:radial-gradient(ellipse at 78% 28%,#2b3d55 0%,var(--azul-dk) 62%)}
+
+/* portada */
+.hero h1{font-size:clamp(2.4rem,4.5vw,4rem);line-height:1.1}
+.hero-photo{width:min(100%,470px)}
+.hero-photo .frame{padding:0;background:none;box-shadow:none;transform:none}
+.hero-photo .frame::after{content:'';position:absolute;inset:20px -20px -20px 20px;border:1px solid var(--oro-md);z-index:-1}
+.hero-photo img{box-shadow:0 40px 80px -30px rgba(0,0,0,.65)}
+.hero-photo .cap{position:static;margin-top:14px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--oro-md);text-align:left}
+.sello{width:104px;height:104px;right:-26px;top:-30px;transform:none;border:1px solid rgba(244,236,217,.55);outline:0;font-family:var(--sans);font-weight:600;font-size:.6rem;letter-spacing:.2em;box-shadow:none}
+
+/* quiénes somos */
+.person .photo{padding:0;background:none;box-shadow:none;transform:none !important;position:relative}
+.person .photo::after{content:'';position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--oro-md);z-index:-1}
+.person:nth-child(2) .photo::after{inset:16px 16px -16px -16px;border-color:var(--terracota)}
+.person .photo img{box-shadow:0 26px 50px -28px rgba(38,53,73,.55)}
+.person:hover .photo{transform:none}
+.person .role{position:static;display:inline-block;background:none;box-shadow:none;color:var(--terracota);padding:0;margin-top:38px;font-size:.7rem;letter-spacing:.24em}
+.person:nth-child(2) .role{background:none;color:var(--terracota);right:auto}
+.person h3{margin-top:8px}
+.person li{border-radius:2px;background:transparent;border-color:rgba(38,53,73,.22);letter-spacing:.1em;text-transform:uppercase;font-size:.66rem}
+.bridge{transform:translate(-50%,50%);background:var(--azul-dk);box-shadow:0 30px 60px -30px rgba(0,0,0,.55);border-top:2px solid var(--terracota)}
+.bridge cite{font-size:.68rem;letter-spacing:.24em}
+
+/* caminos */
+.flag{background:linear-gradient(150deg,var(--azul-dk),var(--azul) 75%);box-shadow:none;border-top:2px solid var(--terracota)}
+.flag::before{display:none}
+.flag .tag{border-radius:0;background:transparent;border:1px solid var(--oro-md);color:var(--oro);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;padding:7px 14px}
+.flag .num-lbl{color:var(--terracota);filter:brightness(1.35)}
+.flag .para{font-weight:400;font-size:.88rem;letter-spacing:0;text-transform:none;color:rgba(244,236,217,.7)}
+.f-cta{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 6px}
+.flag .mas{margin:0 0 0 18px}
+.flag .aside li{font-size:.94rem}
+.pcard{border-radius:0;background:#fff;border:1px solid rgba(38,53,73,.12);border-top:2px solid var(--terracota)}
+.pcard:hover{box-shadow:0 30px 50px -34px rgba(38,53,73,.5);border-color:rgba(38,53,73,.12);border-top-color:var(--terracota)}
+.pcard .mod{font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde-dk)}
+.pcard .btn{margin-top:24px}
+.pcard .num-lbl{color:var(--terracota)}
+.pcard h4,.flag .aside h4{font-size:.68rem;letter-spacing:.24em}
+
+/* "Ver más" */
+details.vm{margin:6px 0 4px}
+details.vm summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota);padding:8px 0}
+details.vm summary::-webkit-details-marker{display:none}
+details.vm summary::after{content:'+';font-size:1.2rem;line-height:1;transition:transform .3s}
+details.vm[open] summary::after{transform:rotate(45deg)}
+details.vm .b{display:none}
+details.vm[open] .a{display:none}
+details.vm[open] .b{display:inline}
+.flag details.vm summary{color:var(--oro)}
+details.vm>*:not(summary){animation:vmin .45s ease}
+@keyframes vmin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.pcard details.vm .para{font-size:.9rem;color:#5b6b7e;margin:10px 0 12px}
+.pcard details.vm>p{font-size:.95rem;color:#41526a;margin-bottom:12px}
+.pcard details.vm h4{margin-top:16px}
+.flag details.vm>p{color:rgba(244,236,217,.88);margin-top:8px}
+.flag .aside details.vm ul{margin-top:6px}
+
+/* proceso, pasos y recuadros */
+.steps .n{background:transparent;border:1px solid var(--terracota);color:var(--terracota)}
+.formato{background:var(--azul-dk);border-left:2px solid var(--terracota)}
+.recibes{border-radius:0}
+.fit .si{background:#fff;border-top:2px solid var(--verde)}
+.fit .no{background:#fff;border-top:2px solid var(--terracota)}
+.fit>div{border:1px solid rgba(38,53,73,.1);border-top-width:2px}
+.jornada li{border-top-color:var(--terracota)}
+.jornada .n{color:var(--terracota)}
+
+/* testimonios */
+.testi.hojas::before{opacity:.45}
+.quote{border-radius:0;transform:none !important;margin-top:0 !important;background:var(--crema);border-top:2px solid var(--terracota)}
+.shot{transform:none !important;background:var(--crema);padding:10px 10px 14px}
+.shot span{font-size:.66rem;letter-spacing:.18em}
+.shots-title{font-size:.7rem;letter-spacing:.26em}
+
+/* proyectos */
+.tile{padding:0;background:#fff;border:1px solid rgba(38,53,73,.12);box-shadow:none;transform:none !important}
+.tile img{display:block}
+.tile .cap,.tile small{padding-left:16px;padding-right:16px}
+.tile .cap{margin-top:0;padding-top:14px}
+.tile small{padding-bottom:14px}
+.tile .cap:last-child{padding-bottom:14px}
+.tile:hover{transform:translateY(-4px) !important;box-shadow:0 26px 46px -30px rgba(38,53,73,.5)}
+.t1,.t2,.t3,.t4,.t5,.t6{transform:none}
+
+/* faq y cierre */
+.faqs summary{font-size:1.2rem}
+.close.hojas::before{opacity:.5}
+.close{padding-top:clamp(100px,11vw,160px)}
+.close .social{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+
+@media (max-width:820px){
+  .sello{right:-8px;width:88px;height:88px;font-size:.54rem}
+  .hero-photo .frame::after{inset:14px -10px -14px 14px}
+  .person .photo::after,.person:nth-child(2) .photo::after{inset:12px -10px -12px 10px}
+  .flag .mas{margin:14px 0 0}
+}
+
+/* ---- ajustes 1-oct (feedback de Ale) ---- */
+/* textura de hojas más visible en secciones oscuras */
+.hojas::before{opacity:.4;mix-blend-mode:screen}
+.testi.hojas::before,.close.hojas::before{opacity:.24}
+.hero.hojas::before{opacity:.42;-webkit-mask-image:linear-gradient(to left,#000 18%,transparent 78%);mask-image:linear-gradient(to left,#000 18%,transparent 78%)}
+/* nombre y rol debajo de la foto, fuera del marco */
+.person .role{display:block;margin-top:44px}
+/* testimonio en video */
+.vt{display:grid;grid-template-columns:min(280px,40%) 1fr;gap:clamp(22px,4vw,56px);align-items:center;margin:0 0 70px;max-width:760px}
+.vt-play{position:relative;display:block;aspect-ratio:9/16;border:0;padding:0;cursor:pointer;overflow:hidden;background:#000;border-top:2px solid var(--terracota);box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.vt-play img{width:100%;height:100%;object-fit:cover;opacity:.88;transition:opacity .3s,transform .6s}
+.vt-play:hover img{opacity:1;transform:scale(1.03)}
+.vt-play iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vt-play .pb{position:absolute;inset:0;display:grid;place-items:center}
+.vt-play .pb span{width:70px;height:70px;border-radius:50%;background:var(--oro);color:var(--azul-dk);display:grid;place-items:center;font-size:1.3rem;padding-left:4px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.vt-name{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--crema);margin:6px 0 4px}
+.vt-role{font-size:.95rem;color:rgba(244,236,217,.8);margin-bottom:12px}
+.vt-note{font-style:italic;color:var(--oro-md)}
+@media (max-width:640px){.vt{grid-template-columns:1fr;max-width:300px}}
+
+/* textura sobre fondo crema (Alquimia de Marcas): se funde en lugar de aclarar */
+.hojas-claro::before{mix-blend-mode:multiply;opacity:.3;-webkit-mask-image:linear-gradient(to left,#000 10%,transparent 72%);mask-image:linear-gradient(to left,#000 10%,transparent 72%)}
+
+/* Quiénes somos: el nombre vive solo en la etiqueta */
+.person .role{font-size:.78rem;letter-spacing:.26em;margin-bottom:14px}
+
+.person .role{margin-bottom:6px}
+.person h3{margin:0 0 14px}
+
+/* testimonios: capturas completas y video centrado en celular */
+.shots{align-items:flex-start}
+.shot{flex:0 0 min(290px,76vw)}
+.shot img{height:auto;object-fit:contain;cursor:zoom-in}
+@media (max-width:640px){
+  .vt{margin-left:auto;margin-right:auto;text-align:center}
+  .vt-play{width:100%}
+}
+
+/* ===== Proyectos: caso Kronos ===== */
+.work .head{max-width:760px}
+.kr-banner{position:relative;margin:0 0 clamp(36px,5vw,64px);cursor:zoom-in}
+.kr-banner img{display:block;width:100%;height:auto;box-shadow:0 36px 70px -34px rgba(38,53,73,.6)}
+.kr-banner::after{content:'';position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--oro-md);z-index:-1}
+.kr-story{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,4vw,56px);margin-bottom:clamp(40px,5vw,64px)}
+.kr-story>div{border-top:2px solid var(--terracota);padding-top:20px}
+.kr-story h3{font-size:clamp(1.35rem,2.2vw,1.7rem);margin:4px 0 12px}
+.kr-story p:not(.num-lbl){color:#41526a;font-size:.98rem}
+.kr-built{background:var(--azul-dk);color:var(--crema);padding:clamp(26px,4vw,44px);margin-bottom:clamp(36px,5vw,56px);border-left:2px solid var(--terracota)}
+.kr-built h3{font-size:1.5rem;color:var(--oro);margin-bottom:18px}
+.kr-built ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 28px}
+.kr-built li{padding-left:22px;position:relative;font-size:.95rem}
+.kr-built li::before{content:'◆';position:absolute;left:0;top:.35em;font-size:.6rem;color:var(--terracota);filter:brightness(1.3)}
+.kr-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,22px);margin-bottom:clamp(70px,8vw,110px)}
+.kr-gallery figure{aspect-ratio:3/4;overflow:hidden;cursor:zoom-in;position:relative;background:var(--azul-dk)}
+.kr-gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.kr-gallery figure:hover img{transform:scale(1.04)}
+.kr-gallery .kr-logo{display:grid;place-items:center;padding:12%;background:radial-gradient(ellipse at 50% 40%,#22344d,var(--azul-dk))}
+.kr-gallery .kr-logo img{height:auto;object-fit:contain}
+.otras{border-top:1px solid rgba(38,53,73,.18);padding-top:clamp(36px,5vw,56px)}
+.otras-h{max-width:640px;margin-bottom:28px}
+.otras-h h3{font-size:clamp(1.3rem,2.2vw,1.65rem);margin-top:8px;line-height:1.3}
+.otras-g{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,22px)}
+.otras-g .tile .cap b{font-size:.95rem}
+@media (max-width:900px){
+  .kr-story{grid-template-columns:1fr}
+  .kr-built ul{grid-template-columns:1fr 1fr}
+  .kr-gallery,.otras-g{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){.kr-built ul{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Mujer Alquímica Digital, inicio">
+      <img src="assets/icono-mad.png" alt="" />
+      
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav class="links" id="links">
+      <a href="#nosotras">Quiénes somos</a>
+      <a href="#caminos">Caminos</a>
+      <a href="#empezar">Cómo empezar</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a class="btn btn-oro" data-apply="" href="#aplicar">Aplicar</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PORTADA -->
+<section class="hero hojas dark" id="inicio">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow rv">Mujer Alquímica Digital · Mimi &amp; Ale</p>
+      <h1 class="rv d1">Donde la estrategia encuentra <em>tu cuerpo.</em></h1>
+      <p class="lead rv d2">Tres caminos para construir, destrabar o implementar tu negocio digital desde quién eres. Tú eliges la profundidad; nosotras te acompañamos con una mirada que une lo que pasa por dentro de ti con la forma en que tu negocio se muestra por fuera.</p>
+      <div class="hero-cta rv d2">
+        <a class="btn btn-oro" data-apply="" href="#aplicar">
+          Quiero aplicar
+        </a>
+        <a class="btn btn-line" href="#caminos">Ver los tres caminos</a>
+      </div>
+    </div>
+    <div class="hero-photo rv d1">
+      <div class="sello">Por dentro<br>y por fuera</div>
+      <div class="frame">
+        
+        <img src="assets/juntas.jpg" alt="Mimi y Ale sentadas en un sofá, sonriendo" width="922" height="1152" fetchpriority="high" />
+        <div class="cap">Mimi &amp; Ale</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">Desliza</div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section class="about" id="nosotras">
+  <div class="wrap">
+    <div class="about-intro">
+      <p class="eyebrow rv">Quiénes somos</p>
+      <h2 class="rv d1">Dos miradas, un solo proceso.</h2>
+      <p class="lead rv d2">Ale diseñó la marca de Mimi. Mimi acompañó a Ale como terapeuta. Después empezamos a trabajar juntas, y de ahí nació Mujer Alquímica Digital. Cada una vivió desde adentro el trabajo de la otra, y por eso sabemos que lo de adentro sostiene lo de afuera. Hoy acompañamos a mujeres que ya tienen un don real y quieren que su negocio lo refleje.</p>
+    </div>
+
+    <div class="duo">
+      <article class="person rv">
+        <div class="photo">
+          
+          <img src="assets/mimi.jpg" alt="Mimi, terapeuta somática" loading="lazy" />
+          </div>
+        <span class="role">Mundo interno</span>
+        <h3>Mimi</h3>
+        <p>Terapeuta especializada en trabajo somático, Sagrado Femenino y procesos de transformación profunda. Lee la astrología de la dueña y del negocio, y acompaña el trabajo de creencias, patrones y reprogramación que libera lo que ninguna estrategia puede tocar.</p>
+      </article>
+
+      <article class="person rv d1">
+        <div class="photo">
+          
+          <img src="assets/ale.jpg" alt="Ale, estratega creativa" loading="lazy" />
+          </div>
+        <span class="role">Mundo externo</span>
+        <h3>Ale</h3>
+        <p>Publicista, diseñadora gráfica y estratega creativa. Convierte lo que sale del trabajo interno en una marca clara: mensaje, identidad visual y oferta. Además construye páginas web, automatizaciones, campañas y herramientas con inteligencia artificial para que tu negocio funcione sin agotarte.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="bridge rv">
+    <blockquote>La <em>espiritualidad</em> sin estructura es caos.<br>El <em>marketing</em> sin cuerpo es veneno.</blockquote>
+    <cite>— Mimi y Ale</cite>
+  </div>
+</section>
+
+<!-- CAMINOS -->
+<section class="services" id="caminos">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rv">Caminos</p>
+      <h2 class="rv d1">Tres caminos. Un solo objetivo: un negocio que se siente tuyo.</h2>
+      <p class="lead rv d2">Elige según dónde estás hoy. Si no sabes cuál es el tuyo, aplica y lo decidimos juntas en la llamada de descubrimiento.</p>
+    </div>
+
+    <article class="flag hojas rv" id="alquimia-de-marcas">
+      <div class="f-main">
+        <span class="tag">Acompañamiento 1:1 · 3 meses</span>
+        <p class="num-lbl">Camino 01</p>
+        <h3>Alquimia de Marcas</h3>
+        <p class="para">Para emprendedoras y profesionales del bienestar con un servicio, un producto físico o un programa digital.</p>
+        <p class="pasa">Lo que haces tiene una profundidad real, pero tu presencia digital no la muestra. Quizá todavía no tienes una marca, o tienes una que se ve bonita pero no te representa.</p>
+        <p class="promesa">Una marca con raíces: que se ve profesional, muestra la profundidad de tu trabajo y te diferencia de las demás.</p>
+        <details class="vm"><summary><span class="a">Leer más</span><span class="b">Leer menos</span></summary>
+          <p>Un proceso completo donde leemos la astrología de ti y de tu negocio, descubrimos tu diferencial y construimos las raíces de tu marca contigo. Con esa base diseñamos la identidad de tu negocio, tu oferta y tu lanzamiento, para que tu marca no sea solo algo bonito, sino algo que se sostiene.</p>
+        </details>
+        <div class="f-cta">
+          <a class="btn btn-oro" data-apply="Alquimia de Marcas" href="#aplicar">Quiero aplicar a Alquimia de Marcas</a>
+          <a class="mas" href="#alquimia">Ver el proceso completo ↓</a>
+        </div>
+      </div>
+      <div class="aside">
+        <h4>Incluye</h4>
+        <ul>
+          <li>Astrología de la dueña y del negocio</li>
+          <li>Investigación de mercado y de tu clienta, conectada con lo que sale en tu astrología</li>
+          <li>Diferencial de marca</li>
+          <li>Marca completa y manual de uso de la marca</li>
+        </ul>
+        <details class="vm light"><summary><span class="a">Ver todo lo que incluye</span><span class="b">Ver menos</span></summary>
+          <ul>
+            <li>Los productos o servicios que le ofreces a tus clientas, ordenados de lo más simple a lo más completo</li>
+            <li>Catálogo de tus productos o servicios</li>
+            <li>Lanzamiento en redes sociales de la nueva identidad de tu negocio</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <div class="pduo">
+      <article class="pcard rv">
+        <p class="num-lbl">Camino 02</p>
+        <h3>Consultoría</h3>
+        <p class="mod">Sesiones 1:1 con Mimi y Ale · Online · A tu medida</p>
+        <p class="pasa">Sientes que algo te frena y no sabes qué es, o tienes claro lo que quieres pero no sabes cómo hacerlo ni qué herramientas usar.</p>
+        <p class="promesa">Sales de cada sesión sabiendo cuál es tu siguiente paso, con las decisiones tomadas y las herramientas para avanzar.</p>
+        <details class="vm"><summary><span class="a">Ver detalle</span><span class="b">Ver menos</span></summary>
+          <p class="para">Para emprendedoras y profesionales del bienestar que necesitan claridad o ayuda puntual en algo concreto.</p>
+          <p>Una serie de sesiones individuales, armadas según lo que tú necesites. Miramos juntas qué te frena, resolvemos lo que tienes pendiente y, si hace falta, te enseñamos a usar las herramientas digitales y la inteligencia artificial para avanzar por tu cuenta.</p>
+          <h4>Temas que solemos trabajar</h4>
+          <ul>
+            <li>Tu oferta: qué vendes, cómo lo presentas y por qué hoy no sostiene el precio que mereces</li>
+            <li>Tu mensaje: que lo que dices llegue a la clienta correcta</li>
+            <li>Tu presencia digital y cómo usar las herramientas y la inteligencia artificial a tu favor</li>
+            <li>Lo que te frena a mostrarte o a cobrar, trabajado desde el cuerpo</li>
+            <li>Tus momentos: cuándo lanzar y moverte, según tu carta natal</li>
+          </ul>
+          <p class="nota">Si en el camino vemos que lo mejor es que lo construyamos nosotras, te lo proponemos como siguiente paso.</p>
+        </details>
+        <a class="btn btn-azul" data-apply="Consultoría" href="#aplicar">Quiero aplicar a Consultoría</a>
+      </article>
+
+      <article class="pcard rv d1">
+        <p class="num-lbl">Camino 03</p>
+        <h3>Implementación</h3>
+        <p class="mod">Proyecto a la medida · Lo construimos y te lo entregamos funcionando</p>
+        <p class="pasa">Ya sabes lo que ofreces, pero lo estás haciendo todo tú (la página, los correos, el seguimiento) y no tienes tiempo ni ganas de descifrar la tecnología.</p>
+        <p class="promesa">Tu estructura digital construida y funcionando, para que tu negocio opere sin depender de que tú hagas todo.</p>
+        <details class="vm"><summary><span class="a">Ver detalle</span><span class="b">Ver menos</span></summary>
+          <p class="para">Para emprendedoras y profesionales del bienestar que ya saben quiénes son y qué ofrecen.</p>
+          <p>Si ya tienes claros tu mensaje y tu oferta, nos encargamos de construir lo que tu negocio necesita para mostrarse, atraer clientas y sostenerse. Lo montamos, te lo entregamos funcionando y te enseñamos a usarlo, con la mirada de Mimi para que tu forma de comunicar y vender se sienta tuya y no forzada.</p>
+          <h4>Lo que podemos construir contigo</h4>
+          <ul>
+            <li>Páginas web: de captura y de ventas</li>
+            <li>Correos y secuencias automáticas de bienvenida y seguimiento</li>
+            <li>WhatsApp conectado a tu comunidad y a tus lanzamientos, con mensajes automatizados</li>
+            <li>Tu plataforma comercial con IA: un CRM propio donde vive toda la información de tu negocio (contactos, conversaciones, ventas y seguimiento)</li>
+            <li>Contenido para redes: creación, diseño y edición, anclado a tu negocio y a tu astrología</li>
+          </ul>
+          <p class="nota">La duración depende de lo que necesites.</p>
+        </details>
+        <a class="btn btn-azul" data-apply="Implementación" href="#aplicar">Quiero aplicar a Implementación</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ALQUIMIA DE MARCAS: PROCESO -->
+<section class="alq hojas hojas-claro" id="alquimia">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rv">Acompañamiento 1:1 · 3 meses · 12 sesiones en dupla</p>
+      <h2 class="rv d1">Alquimia de Marcas: donde tu marca nace desde adentro.</h2>
+      <p class="lead rv d2">La mayoría de los procesos de marca empiezan por el logo y los colores. Nosotras empezamos por ti. Primero entendemos qué viniste a hacer y qué vino a materializar tu negocio; después lo convertimos en una marca que se ve, se dice y se vende como tuya.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="rv"><span class="n">1</span><div><h4>Tu mapa astrológico</h4><p>Leemos la astrología de la dueña del negocio para entender su propósito, y la astrología del negocio para saber qué vino a materializar.</p></div></li>
+      <li class="rv d1"><span class="n">2</span><div><h4>Las raíces de tu marca</h4><p>Trabajamos contigo tus valores y tu diferencial.</p></div></li>
+      <li class="rv"><span class="n">3</span><div><h4>Investigación de mercado y de clienta</h4><p>La hacemos nosotras y te la presentamos para ver oportunidades, ventajas y desventajas, siempre conectada con lo que salió en tu astrología.</p></div></li>
+      <li class="rv d1"><span class="n">4</span><div><h4>Tu identidad visual</h4><p>Con las raíces claras, diseñamos colores, tipografía y variaciones de tu marca, y armamos tu manual.</p></div></li>
+      <li class="rv"><span class="n">5</span><div><h4>Tu oferta</h4><p>Definimos qué productos o servicios le ofreces a tus clientas y en qué orden, de lo más simple a lo más completo (lo que en marketing se llama escalera de valor). Según lo que tengas, armamos un catálogo de productos o de servicios.</p></div></li>
+      <li class="rv d1"><span class="n">6</span><div><h4>El lanzamiento de tu marca</h4><p>Preparamos las piezas y acompañamos el lanzamiento de tu marca en redes sociales.</p></div></li>
+    </ol>
+
+    <div class="formato rv">
+      <h3>Dos tipos de sesiones</h3>
+      <div class="cols">
+        <div><b>Doce sesiones con Mimi y Ale juntas</b><p>Es donde se construye el proceso.</p></div>
+        <div><b>Sesiones individuales con Mimi</b><p>Según lo que tu proceso necesite. Se trabajan creencias, patrones y reprogramación, la parte más profunda. Su cantidad se ajusta a cada persona.</p></div>
+      </div>
+    </div>
+
+    <div class="recibes rv">
+      <h3>Lo que recibes al final</h3>
+      <ul>
+        <li>Astrología de tu negocio</li>
+        <li>Investigación de mercado e investigación de tu clienta</li>
+        <li>Las raíces de tu marca: valores y diferencial</li>
+        <li>Tu marca: logo, variaciones y manual de marca</li>
+        <li>Tu oferta ordenada: qué le ofreces a tus clientas y en qué orden</li>
+        <li>Catálogo de productos o servicios*</li>
+        <li>Piezas y lanzamiento en redes sociales de la nueva identidad de tu negocio</li>
+      </ul>
+      <p class="foot">*Se adapta a lo que cada marca tenga: producto físico, servicio o infoproducto.</p>
+    </div>
+
+    <div class="fit">
+      <div class="si rv">
+        <h3>Es para ti si…</h3>
+        <ul>
+          <li>Quieres abrir tu negocio en digital, o ya estás en presencial y quieres dar el salto.</li>
+          <li>Quieres tener una marca desde cero, o renovar una que no refleja la profundidad de lo que ofreces, sea un servicio, un producto o un programa.</li>
+          <li>Ya estás en digital pero tu marca no se diferencia, o no trae a los clientes que quieres.</li>
+          <li>Estás dispuesta a invertir, a trabajarte por dentro y entiendes que lo de adentro sostiene lo de afuera.</li>
+        </ul>
+      </div>
+      <div class="no rv d1">
+        <h3>No es para ti si…</h3>
+        <ul>
+          <li>Buscas una fórmula rápida o una plantilla: este es un proceso hecho a tu medida.</li>
+          <li>Solo quieres un logo y una paleta, sin el trabajo interno: para nosotras una marca solo se sostiene si hay un proceso interno detrás.</li>
+          <li>No puedes dedicar tiempo a las sesiones ni a tu propio proceso durante los 3 meses.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta-c rv"><a class="btn btn-azul" data-apply="Alquimia de Marcas" href="#aplicar">Quiero aplicar a Alquimia de Marcas</a></div>
+  </div>
+</section>
+
+<!-- CÓMO EMPEZAR -->
+<section class="empezar " id="empezar">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rv">Cómo empezar</p>
+      <h2 class="rv d1">De tu aplicación a tu marca funcionando.</h2>
+      <p class="lead rv d2">Un camino corto y claro, sin sorpresas.</p>
+    </div>
+    <ol class="jornada">
+      <li class="rv"><span class="n">01</span><h4>Aplicas</h4><p>Completas un formulario breve contándonos dónde estás y qué quieres construir.</p></li>
+      <li class="rv d1"><span class="n">02</span><h4>Leemos tu caso</h4><p>Revisamos tus respuestas, tu web y tus redes, para que la conversación vaya directo a lo tuyo.</p></li>
+      <li class="rv d2"><span class="n">03</span><h4>Llamada de 30 minutos, sin costo</h4><p>Vemos dónde estás parada, cuál de los tres caminos te sirve, cómo lo resolveríamos y cuánto cuesta.</p></li>
+      <li class="rv d1"><span class="n">04</span><h4>Propuesta y decisión</h4><p>Si hay encaje, te enviamos el alcance y la inversión.</p></li>
+      <li class="rv d2"><span class="n">05</span><h4>Empezamos</h4><p>Comenzamos a trabajar juntas.</p></li>
+    </ol>
+    <div class="cta-c rv"><a class="btn btn-azul" data-apply="" href="#aplicar">Quiero aplicar</a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testi hojas dark" id="testimonios">
+  <div class="wrap">
+    <p class="eyebrow rv">Testimonios</p>
+    <h2 class="rv d1">Lo que dicen quienes ya trabajaron con nosotras.</h2>
+
+    <div class="qgrid">
+      <article class="quote rv">
+        <span class="big">“</span>
+        <img src="assets/flor.jpg" alt="Flor De María Castillo" loading="lazy" />
+        <p>Estoy enamorada de lo que hacemos juntas. En cada sesión conecto sinceramente con lo que quiero, no es lo mismo hacerlo a mi manera que hacerlo con ellas. Es un equipazo, y mucha gente se está perdiendo este conocimiento.</p>
+        <div class="by">Flor De María Castillo<small>Clienta 1:1 · Productos naturales</small></div>
+      </article>
+      <article class="quote rv d1">
+        <span class="big">“</span>
+        <img src="assets/luisa.jpg" alt="Luisa Inés Leal" loading="lazy" />
+        <p>Es importante la parte espiritual, pero también la económica para cumplir nuestros sueños. Es lindo encontrar un grupo de mujeres buscando lo mismo y encontrarse en este lugar.</p>
+        <div class="by">Luisa Inés Leal<small>Apiturismo</small></div>
+      </article>
+    </div>
+
+    
+    <div class="vt rv">
+      <button class="vt-play" type="button" data-yt="NyyOb-yWgDg" aria-label="Reproducir el testimonio en video de Xime">
+        <img src="https://img.youtube.com/vi/NyyOb-yWgDg/hqdefault.jpg" alt="Xime, testimonio en video" loading="lazy" />
+        <span class="pb"><span>▶</span></span>
+      </button>
+      <div class="vt-txt">
+        <p class="eyebrow">Testimonio en video</p>
+        <p class="vt-name">Xime</p>
+        <p class="vt-role">Psicóloga y facilitadora de Sexualidad Sagrada Femenina</p>
+        <p class="vt-note">Escúchala en sus propias palabras.</p>
+      </div>
+    </div>
+
+    <p class="shots-title rv">Mensajes reales de clientas</p>
+    <div class="shots rv">
+      <figure class="shot"><img src="assets/testi-1.png" alt="Mensaje de una clienta sobre las sesiones de claridad con Ale" loading="lazy" /><span><i style="background:var(--terracota)"></i>Con Ale · Estrategia y marca</span></figure>
+      <figure class="shot"><img src="assets/testi-2.png" alt="Mensaje de una clienta sobre el trabajo con Mimi y la energía del dinero" loading="lazy" /><span><i style="background:var(--verde)"></i>Con Mimi · Trabajo somático</span></figure>
+      <figure class="shot"><img src="assets/testi-3.png" alt="Mensaje de una clienta sobre claridad en el valor de su tiempo" loading="lazy" /><span><i style="background:var(--verde)"></i>Con Mimi · Trabajo somático</span></figure>
+      <figure class="shot"><img src="assets/testi-4.png" alt="Mensaje sobre unir las herramientas digitales con el ser" loading="lazy" /><span><i style="background:var(--terracota)"></i>Con Ale · Estrategia y marca</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="work" id="proyectos">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow rv">Proyecto · Una marca construida por las dos</p>
+      <h2 class="rv d1">Kronos: un hobby que se volvió misión.</h2>
+      <p class="lead rv d2">Flor hacía jabones sin una marca detrás. Construimos juntas, desde la raíz, la identidad de Kronos: jabones orgánicos para un ritual de baño donde cada persona se reencuentra consigo misma.</p>
+    </div>
+
+    <figure class="kr-banner rv" data-zoom="assets/kronos-banner.jpg">
+      <img src="assets/kronos-banner.jpg" alt="Jabones Kronos de los cuatro elementos sobre un fondo de cielo estrellado" loading="lazy" />
+    </figure>
+
+    <div class="kr-story">
+      <div class="rv">
+        <p class="num-lbl">Antes</p>
+        <h3>Un hobby sin identidad</h3>
+        <p>Flor hacía jabones, pero no tenían marca ni identidad. Los hacía como un pasatiempo, y las ganas de crear y de trabajar en lo suyo las tenía apagadas.</p>
+      </div>
+      <div class="rv d1">
+        <p class="num-lbl">Lo que construimos</p>
+        <h3>Raíces antes que logo</h3>
+        <p>Empezamos por la astrología de Flor y de su negocio. Ahí apareció lo que no se veía: no era un hobby, era una misión. Con esa claridad diseñamos toda la marca.</p>
+      </div>
+      <div class="rv d2">
+        <p class="num-lbl">Hoy</p>
+        <h3>Una marca lista para lanzarse</h3>
+        <p>Flor se reconectó con su deseo de crear, y eso se siente en cada pieza. Kronos está construida y lista para salir al mundo.</p>
+      </div>
+    </div>
+
+    <div class="kr-built rv">
+      <h3>Lo que construimos juntas</h3>
+      <ul>
+        <li>Astrología del negocio</li>
+        <li>Raíces y misión de la marca</li>
+        <li>Logo y variaciones</li>
+        <li>Empaque y papelería</li>
+        <li>Página web</li>
+        <li>Piezas de lanzamiento</li>
+      </ul>
+    </div>
+
+    <div class="kr-gallery">
+      <figure class="rv" data-zoom="assets/kronos-kit.jpg"><img src="assets/kronos-kit.jpg" alt="Caja de regalo Kronos con los cuatro jabones de los elementos" loading="lazy" /></figure>
+      <figure class="rv d1" data-zoom="assets/kronos-agua.jpg"><img src="assets/kronos-agua.jpg" alt="Jabón del elemento agua de Kronos" loading="lazy" /></figure>
+      <figure class="rv d2" data-zoom="assets/kronos-flor.jpg"><img src="assets/kronos-flor.jpg" alt="Flor preparando los jabones" loading="lazy" /></figure>
+      <figure class="kr-logo rv d1" data-zoom="assets/kronos-montaje.jpg"><img src="assets/kronos-logo.png" alt="Logo de Kronos: El cielo toca tu piel" loading="lazy" /></figure>
+    </div>
+
+    <div class="otras">
+      <div class="otras-h">
+        <p class="eyebrow">Trayectoria</p>
+        <h3>Otras marcas que han nacido de este trabajo</h3>
+      </div>
+      <div class="otras-g">
+        <button class="tile" data-src="assets/marca-claudia.jpg"><img src="assets/marca-claudia.jpg" alt="Identidad de marca de Claudia E. Newton" loading="lazy" style="--r:4/3" /><div class="cap"><b>Claudia E. Newton</b><i>2023</i></div></button>
+        <button class="tile" data-src="assets/marca-simone.jpg"><img src="assets/marca-simone.jpg" alt="Identidad de marca de Simone Cruz" loading="lazy" style="--r:4/3" /><div class="cap"><b>Simone Cruz</b><i>2024</i></div></button>
+        <button class="tile" data-src="assets/marca-academia.jpg"><img src="assets/marca-academia.jpg" alt="Identidad de Academia para Amar" loading="lazy" style="--r:4/3" /><div class="cap"><b>Academia para Amar</b><i>2025</i></div></button>
+        <button class="tile" data-src="assets/marca-otras.jpg"><img src="assets/marca-otras.jpg" alt="Otras marcas: Escuela de Sexualidad, Laura Ortiz, Mimi Castillo, Leticia Monreal, Lupita Estrada, Lina Jiménez" loading="lazy" style="--r:4/3" /><div class="cap"><b>Y más marcas</b><i>+6</i></div></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+<section class="faq-s " id="preguntas">
+  <div class="wrap narrow">
+    <p class="eyebrow rv">Preguntas frecuentes</p>
+    <h2 class="rv d1">Lo que más nos preguntan.</h2>
+    <div class="faqs rv">
+      <details><summary>¿Para quién son estos caminos?</summary><p>Para mujeres que quieren tener, abrir o reposicionar su negocio de bienestar en digital, y que entienden que lo de adentro sostiene lo de afuera.</p></details>
+      <details><summary>¿Necesito saber de astrología?</summary><p>No. Mimi lee las cartas y te las explica en lenguaje claro, conectadas con las decisiones reales de tu negocio.</p></details>
+      <details><summary>¿Cuál es la diferencia entre los tres caminos?</summary><p>Alquimia de Marcas es el proceso completo donde nace tu marca. Consultoría son sesiones puntuales para decidir o destrabar algo específico. Implementación es cuando ya tienes claridad y nos encargamos de construirlo.</p></details>
+      <details><summary>¿Puedo combinar caminos?</summary><p>Sí. Muchas veces una consultoría es la puerta de entrada y después se continúa con uno de los otros dos caminos.</p></details>
+      <details><summary>¿Cuánto dura Alquimia de Marcas?</summary><p>Tres meses, con doce sesiones en dupla y las sesiones individuales con Mimi que tu proceso necesite.</p></details>
+      <details><summary>¿Qué pasa si ya tengo una marca o un negocio?</summary><p>Lo adaptamos. El proceso se ajusta a si tienes producto físico, servicios o un programa digital, y a lo que ya construiste.</p></details>
+      <details><summary>¿Cuánto cuesta?</summary><p>Depende del camino y de tu caso. Lo compartimos en la llamada de descubrimiento.</p></details>
+      <details><summary>¿Cómo empiezo?</summary><p>Completando la aplicación. Nosotras te respondemos.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="close hojas dark" id="contacto">
+  <div class="wrap">
+    <div class="polas rv">
+      <div class="pola"><img src="assets/mimi-corazon.jpg" alt="" loading="lazy" /></div>
+      <div class="pola"><img src="assets/juntas.jpg" alt="" loading="lazy" style="object-position:center 25%" /></div>
+      <div class="pola"><img src="assets/ale-cuaderno.jpg" alt="" loading="lazy" /></div>
+    </div>
+    <p class="eyebrow rv">Conversemos</p>
+    <h2 class="rv d1">Cuéntanos qué quieres <em>construir.</em></h2>
+    <p class="lead rv d2">Aplica y te ayudamos a elegir el punto de partida que más sentido tenga para ti.</p>
+    <a class="btn btn-oro rv d2" data-apply="" href="#aplicar">Quiero aplicar</a>
+    <p class="social rv">¿Prefieres escribirnos? <a data-wa="Hola, quiero conversar sobre sus servicios." href="#contacto">WhatsApp</a> · <a href="https://instagram.com/mujeralquimicadigital" target="_blank" rel="noopener">@mujeralquimicadigital</a></p>
+  </div>
+</section>
+<footer>© 2026 Mujer Alquímica Digital · Mimi &amp; Ale</footer>
+
+<a class="wa-float" id="waFloat" data-wa="Hola, quiero conversar sobre sus servicios." href="#contacto" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.7 1.5c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.200-3.500-8.400zM12 21.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-3.800 1 1-3.700-.2-.4a9.900 9.900 0 0 1-1.500-5.200C2.100 6.400 6.600 2 12 2c2.600 0 5.100 1 6.900 2.900A9.800 9.800 0 0 1 21.900 12c0 5.400-4.500 9.800-9.900 9.800zm5.400-7.400c-.3-.1-1.800-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.100c-.2.200-.3.200-.6.100-1.700-.8-2.800-1.500-3.900-3.400-.3-.5.300-.5.900-1.600.1-.2 0-.4 0-.5l-.9-2.100c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.400s1 2.800 1.200 3c.1.200 2.100 3.200 5 4.500 1.900.8 2.600.9 3.600.7.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+
+<!-- FORMULARIO DE APLICACIÓN -->
+<div class="ap" id="ap" role="dialog" aria-modal="true" aria-labelledby="apT">
+  <div class="ap-box">
+    
+    <button class="ap-x" type="button" aria-label="Cerrar" data-ap-close>×</button>
+    <div id="apForm">
+      <p class="eyebrow">Aplicación</p>
+      <h3 id="apT">Cuéntanos dónde estás.</h3>
+      <p class="sub">Leemos tu caso con calma antes de hablar y luego tenemos una llamada de 30 minutos, sin costo, para ver cuál es tu camino.</p>
+      <form id="apply" novalidate>
+        <label for="a-nombre">Nombre completo</label>
+        <input id="a-nombre" name="nombre" autocomplete="name" required />
+        <div class="row2">
+          <div><label for="a-email">Correo</label><input id="a-email" name="email" type="email" autocomplete="email" required /></div>
+          <div><label for="a-wa">WhatsApp (con código de país)</label><input id="a-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+57 300 000 0000" required /></div>
+        </div>
+        <label for="a-ig">Instagram o página web</label>
+        <input id="a-ig" name="instagram" placeholder="@tuusuario o tu web" />
+        <label for="a-camino">¿Qué camino te llama?</label>
+        <select id="a-camino" name="camino" required>
+          <option value="">Selecciona uno</option>
+          <option>Alquimia de Marcas (acompañamiento 1:1 de 3 meses)</option>
+          <option>Consultoría (sesiones puntuales)</option>
+          <option>Implementación (construimos tu estructura digital)</option>
+          <option>Todavía no lo sé, quiero ayuda para elegir</option>
+        </select>
+        <label for="a-factu">Facturación mensual actual de tu negocio</label>
+        <select id="a-factu" name="facturacion" required>
+          <option value="">Selecciona un rango (USD)</option>
+          <option>Aún no estoy facturando</option>
+          <option>Hasta $500 USD</option>
+          <option>Entre $500 y $1,500 USD</option>
+          <option>Entre $1,500 y $3,000 USD</option>
+          <option>Entre $3,000 y $7,000 USD</option>
+          <option>Más de $7,000 USD</option>
+        </select>
+        <label for="a-atoron">¿Cuál es hoy tu mayor atorón?</label>
+        <textarea id="a-atoron" name="atoron" required placeholder="Cuéntanos con tus palabras qué quieres resolver."></textarea>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <p class="legal">Al enviar aceptas que te contactemos por el correo y el WhatsApp que nos dejas. Solo los usamos para responder a tu aplicación.</p>
+        <button class="btn btn-azul" type="submit" id="apSend">Enviar mi aplicación</button>
+        <p class="ap-err" id="apErr" role="alert"></p>
+      </form>
+    </div>
+    <div class="ap-ok" id="apOk" aria-live="polite">
+      <p class="eyebrow">Recibida</p>
+      <h3>Gracias, <span id="apName"></span>.</h3>
+      <p id="apOkMsg">Leemos tu caso con calma y te escribimos muy pronto.</p>
+      <a class="btn btn-azul" id="apBook" href="#" target="_blank" rel="noopener" style="display:none">Agendar mi llamada gratuita de 30 minutos</a>
+    </div>
+    <p class="ap-demo" id="apDemo">MODO PRUEBA: el formulario aún no está conectado a Google, no se guardó nada.</p>
+  </div>
+</div>
+<div class="lb" id="lb" role="dialog" aria-label="Imagen ampliada"><button aria-label="Cerrar">×</button><img alt="" /></div>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* ---- WhatsApp: número de MAD (confirmar) ---- */
+const WA_NUMBER = '14806582658';
+const waLink = t => 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(t);
+document.querySelectorAll('[data-wa]').forEach(a => { a.href = waLink(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; });
+
+/* ---- Nav, menú móvil, botón flotante ---- */
+const nav = document.getElementById('nav'), fl = document.getElementById('waFloat');
+const burger = document.getElementById('burger'), links = document.getElementById('links');
+addEventListener('scroll', () => { nav.classList.toggle('solid', scrollY > 40); fl.classList.toggle('show', scrollY > innerHeight * .8); }, {passive:true});
+burger.addEventListener('click', () => { const o = links.classList.toggle('open'); burger.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); });
+links.addEventListener('click', e => { if (e.target.closest('a')) { links.classList.remove('open'); burger.classList.remove('open'); } });
+
+/* ---- Revelado al hacer scroll ---- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+addEventListener('load', () => setTimeout(() => document.querySelectorAll('.hero .rv').forEach(el => el.classList.add('in')), 150));
+
+/* ---- Lightbox de proyectos ---- */
+const lb = document.getElementById('lb'), lbi = lb.querySelector('img');
+document.querySelectorAll('.tile').forEach(t => t.addEventListener('click', () => { lbi.src = t.dataset.src; lb.classList.add('on'); }));
+lb.addEventListener('click', () => lb.classList.remove('on'));
+addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
+
+/* ---- Formulario de aplicación ---- */
+// Pegar aquí la URL de la aplicación web de Google (ver apps-script/LEEME.md). Vacío = modo prueba.
+const APPLY_ENDPOINT = '';
+// Enlace para agendar la llamada de 30 min (Google Calendar o Calendly). Vacío = solo mensaje de gracias.
+const BOOKING_URL = '';
+
+const ap = document.getElementById('ap'), apForm = document.getElementById('apply');
+const apErr = document.getElementById('apErr'), apSend = document.getElementById('apSend');
+let apPrev = null;
+function openApply(camino){
+  apPrev = document.activeElement;
+  document.getElementById('apForm').style.display = '';
+  document.getElementById('apOk').style.display = 'none';
+  apErr.style.display = 'none';
+  if (camino) { const sel = document.getElementById('a-camino'); [...sel.options].forEach(o => { if (o.text.startsWith(camino)) sel.value = o.text; }); }
+  ap.classList.add('on'); document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('a-nombre').focus(), 60);
+}
+function closeApply(){ ap.classList.remove('on'); document.body.style.overflow = ''; if (apPrev) apPrev.focus(); }
+document.querySelectorAll('[data-apply]').forEach(el => el.addEventListener('click', e => { e.preventDefault(); openApply(el.dataset.apply); }));
+ap.addEventListener('click', e => { if (e.target === ap || e.target.closest('[data-ap-close]')) closeApply(); });
+addEventListener('keydown', e => { if (e.key === 'Escape' && ap.classList.contains('on')) closeApply(); });
+
+apForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(apForm));
+  const bad = !f.nombre.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email) || f.whatsapp.replace(/\D/g,'').length < 7 || !f.camino || !f.facturacion || !f.atoron.trim();
+  if (bad) { apErr.textContent = 'Por favor completa todos los campos con un correo y un WhatsApp válidos.'; apErr.style.display = 'block'; return; }
+  apErr.style.display = 'none'; apSend.disabled = true; apSend.textContent = 'Enviando…';
+  const q = new URLSearchParams(location.search), utm = {};
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => { if (q.get(k)) utm[k] = q.get(k); });
+  const payload = { ...f, landing_path: location.pathname + (document.referrer ? ' ← ' + document.referrer : ''), utm };
+  try {
+    if (APPLY_ENDPOINT) {
+      // text/plain evita el preflight de CORS que Apps Script no soporta; la respuesta es opaca.
+      await fetch(APPLY_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) });
+    } else {
+      console.warn('[aplicación] APPLY_ENDPOINT vacío: modo prueba', payload);
+      document.getElementById('apDemo').style.display = 'block';
+    }
+    document.getElementById('apName').textContent = f.nombre.trim().split(' ')[0];
+    document.getElementById('apForm').style.display = 'none';
+    document.getElementById('apOk').style.display = 'block';
+    const b = document.getElementById('apBook');
+    if (BOOKING_URL) { b.href = BOOKING_URL; b.style.display = 'inline-flex'; document.getElementById('apOkMsg').textContent = 'Ya puedes elegir el horario de tu llamada de 30 minutos.'; }
+    apForm.reset();
+  } catch (err) {
+    apErr.innerHTML = 'No pudimos enviar tu aplicación. Inténtalo de nuevo o escríbenos por <a href="' + waLink('Hola, quiero aplicar pero el formulario falló.') + '" target="_blank" rel="noopener">WhatsApp</a>.';
+    apErr.style.display = 'block';
+  } finally { apSend.disabled = false; apSend.textContent = 'Enviar mi aplicación'; }
+});
+
+/* ---- Video testimonio: carga YouTube solo al tocar ---- */
+document.querySelectorAll('[data-yt]').forEach(b => b.addEventListener('click', () => {
+  const f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.yt + '?autoplay=1&rel=0&playsinline=1';
+  f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true; f.title = 'Testimonio en video de Xime';
+  b.querySelector('.pb').remove(); b.appendChild(f);
+}, {once:true}));
+
+/* ---- Capturas de testimonios: tocar para ampliar ---- */
+document.querySelectorAll('.shot img').forEach(i => i.addEventListener('click', () => { lbi.src = i.src; lb.classList.add('on'); }));
+
+/* ---- Galería Kronos: tocar para ampliar ---- */
+document.querySelectorAll('[data-zoom]').forEach(el => el.addEventListener('click', () => { lbi.src = el.dataset.zoom; lb.classList.add('on'); }));
+</script>
+</body>
+</html>
