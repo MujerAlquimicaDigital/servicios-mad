@@ -91,7 +91,7 @@ h2{font-size:clamp(2rem,4.6vw,3.4rem);margin:.5rem 0 1rem}
 @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* QUIÉNES SOMOS */
-.about{--edge:var(--crema);background:var(--crema);padding:clamp(150px,17vw,230px) 0 clamp(150px,16vw,220px);position:relative;z-index:3}
+.about{--edge:var(--blanco);background:var(--blanco);padding:clamp(80px,9vw,130px) 0 clamp(150px,16vw,220px);position:relative;z-index:3}
 .about-intro{max-width:760px;margin-bottom:clamp(50px,7vw,90px)}
 .about-intro .lead{color:#3c4c5f}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
@@ -295,6 +295,15 @@ footer{background:var(--azul-dk);color:rgba(244,236,217,.55);text-align:center;f
 .steps .n{width:52px;height:52px;border-radius:50%;background:var(--azul);color:var(--oro);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem}
 .steps h4{font-family:var(--serif);font-weight:400;font-size:1.2rem;margin:4px 0 6px}
 .steps p{font-size:.95rem;color:#41526a}
+#alquimia-de-marcas h3{color:#fff}
+.flag .lema{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--oro);margin:-4px 0 16px}
+.flag:has(+ .formato.como){margin-bottom:0}
+.formato.como{margin-top:0;border-top:1px solid rgba(247,215,149,.35)}
+.formato.como h3{color:#fff}
+.formato.como h3 .g{color:var(--oro)}
+.formato.como h3 .n{font-family:var(--sans,Raleway,sans-serif);font-weight:600;font-size:.92em}
+.formato.como .eyebrow{color:var(--oro-md);margin-bottom:10px}
+.formato.como .intro{max-width:70ch;margin-bottom:26px}
 .formato{background:var(--azul);color:var(--crema);padding:clamp(26px,4vw,48px);margin-bottom:40px;position:relative}
 .formato h3{font-size:1.6rem;color:var(--oro);margin-bottom:18px}
 .formato .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px)}
@@ -324,7 +333,7 @@ footer{background:var(--azul-dk);color:rgba(244,236,217,.55);text-align:center;f
 .jornada h4{font-family:var(--serif);font-weight:400;font-size:1.15rem;margin-bottom:8px}
 .jornada p{font-size:.92rem;color:#41526a}
 
-.faq-s{--edge:var(--crema);background:var(--crema);padding:clamp(80px,9vw,120px) 0;position:relative;z-index:1}
+.faq-s{--edge:var(--crema);background:var(--crema);padding:clamp(170px,17vw,230px) 0 clamp(80px,9vw,120px);position:relative;z-index:1}
 .faqs{margin-top:34px;border-top:1px solid rgba(38,53,73,.2)}
 .faqs details{border-bottom:1px solid rgba(38,53,73,.2)}
 .faqs summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-family:var(--serif);font-size:1.18rem;position:relative}
@@ -602,11 +611,11 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
     </a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i><i></i></button>
     <nav class="links" id="links">
-      <a href="#nosotras">Quiénes somos</a>
       <a href="#caminos">Caminos</a>
       <a href="#empezar">Cómo empezar</a>
       <a href="#testimonios">Testimonios</a>
       <a href="#proyectos">Proyectos</a>
+      <a href="#nosotras">Quiénes somos</a>
       <a class="btn btn-oro" data-apply="" href="#aplicar">Aplicar</a>
     </nav>
   </div>
@@ -617,7 +626,7 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
   <div class="wrap">
     <div class="hero-copy">
       <p class="eyebrow rv">Mujer Alquímica Digital · Mimi &amp; Ale</p>
-      <h1 class="rv d1">Donde tu medicina encuentra <em>su ecosistema digital.</em></h1>
+      <h1 class="rv d1">Donde tu propósito encuentra <em>su ecosistema digital</em></h1>
       <p class="lead rv d2"><strong>Tres caminos para construir, destrabar o implementar tu negocio digital sin quemar tu sistema nervioso.</strong> Tú eliges la profundidad; nosotras unimos la canalización, la astrología y la regulación somática con la arquitectura, el diseño y la estrategia digital que tu marca necesita para mostrarse con autoridad y claridad.</p>
       <div class="hero-cta rv d2">
         <a class="btn btn-oro" data-apply="" href="#aplicar">
@@ -638,55 +647,12 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
   <div class="scroll-hint">Desliza</div>
 </section>
 
-<!-- QUIÉNES SOMOS -->
-<section class="about" id="nosotras">
-  <div class="wrap">
-    <div class="about-intro">
-      <p class="eyebrow rv">Quiénes somos</p>
-      <h2 class="rv d1">Dos miradas, un solo contenedor.</h2>
-      <p class="lead rv d2">Ale diseñó la marca de Mimi; Mimi acompañó a Ale desde la regulación somática y la canalización. De la integración de ambos mundos nació Mujer Alquímica Digital.</p>
-      <p class="lead rv d2" style="margin-top:1.1rem">Al haber vivido desde adentro la medicina de la otra, entendemos con total certeza que el orden interno es lo que sostiene la estructura externa de un negocio. Hoy acompañamos a mujeres que ya poseen un don real y buscan construir una marca soberana que lo proyecte con autoridad, belleza y paz.</p>
-    </div>
-
-    <div class="duo">
-      <article class="person rv">
-        <div class="photo">
-          
-          <img src="assets/mimi.jpg" alt="Mimi, terapeuta somática" loading="lazy" />
-          </div>
-        <span class="role">Mundo interno</span>
-        <h3>Mimi</h3>
-        <p>Mentora y terapeuta especializada en regulación somática, Sagrado Femenino y procesos de transformación profunda. Canaliza la información del campo energético, decodifica el mapa astral de la fundadora y su negocio, y sostiene la liberación de memorias y lealtades invisibles en el cuerpo. Su trabajo destraba la raíz biológica que ninguna estrategia digital puede tocar.</p>
-        <p class="anos"><b>+14</b><span>años acompañando procesos de transformación profunda</span></p>
-        <p class="formacion"><span>Formación</span>Facilitadora de Sagrado Femenino Taoísta · Astrología · Diplomado yóguico · Mentora de procesos de vida · Facilitadora somática · Facilitadora de hipnosis cuántica</p>
-      </article>
-
-      <article class="person rv d1">
-        <div class="photo">
-          
-          <img src="assets/ale.jpg" alt="Ale, estratega creativa" loading="lazy" />
-          </div>
-        <span class="role">Mundo externo</span>
-        <h3>Ale</h3>
-        <p>Publicista, diseñadora de marcas y arquitecta digital. Traduce la información canalizada y el orden interno en un contenedor terrenal impecable: identidad visual, páginas de venta y ofertas empaquetadas. Maqueta la trastienda técnica, automatizaciones y sistemas digitales para que tu negocio funcione con orden, elegancia y sostenibilidad.</p>
-        <p class="anos"><b>+15</b><span>años en comunicación y diseño de marca</span></p>
-        <p class="formacion"><span>Formación</span>Magíster en Diseño · Especialista en Comunicaciones Corporativas · Publicista · Marketing de diferenciación y posicionamiento · CRM, embudos y automatizaciones con inteligencia artificial</p>
-      </article>
-    </div>
-  </div>
-
-  <div class="bridge rv">
-    <blockquote>La <em>espiritualidad</em> sin estructura es caos.<br>El <em>marketing</em> sin cuerpo es agotamiento.</blockquote>
-    <cite>— Mimi y Ale</cite>
-  </div>
-</section>
-
 <!-- CAMINOS -->
 <section class="services" id="caminos">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow rv">Los caminos</p>
-      <h2 class="rv d1">Tres caminos. Un solo objetivo: un negocio que sostiene tu medicina y tu soberanía.</h2>
+      <p class="eyebrow rv">Nuestros servicios</p>
+      <h2 class="rv d1">Tres caminos. Un solo objetivo: un negocio profesional que se sienta completamente tuyo.</h2>
       <p class="lead rv d2">Elige la opción que mejor responda al momento actual de tu proyecto. Si dudas sobre cuál es tu camino ideal, aplica y evaluamos juntas tu caso en una sesión de valoración 1:1.</p>
     </div>
 
@@ -695,34 +661,38 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
         <span class="tag">Acompañamiento 1:1 · 3 meses</span>
         <p class="num-lbl">Camino 01</p>
         <h3>Alquimia de Marcas</h3>
+        <p class="lema">Donde tu negocio se ordena y se sostiene desde adentro.</p>
         <p class="para">Para emprendedoras, mentoras y profesionales del bienestar con un servicio, producto físico o programa digital.</p>
-        <p class="pasa">Lo que haces posee una profundidad real, pero tu presencia digital no la refleja. Quizá todavía no has construido tu marca, o tienes una identidad visual genérica que no sostiene la dignidad de tu medicina.</p>
-        <p class="promesa">Una marca con raíces: que proyecta belleza y elegancia, comunica la profundidad de tu trabajo y te posiciona con soberanía y autoridad en tu mercado.</p>
-        <details class="vm"><summary><span class="a">Leer más</span><span class="b">Leer menos</span></summary>
-          <p>Un proceso completo donde leemos la astrología de ti y de tu negocio, descubrimos tu diferencial y construimos las raíces de tu marca contigo. Con esa base diseñamos la identidad de tu negocio, tu oferta y tu lanzamiento, para que tu marca no sea solo algo bonito, sino algo que se sostiene.</p>
-        </details>
+        <p class="pasa">Lo que haces tiene un valor enorme, pero tu presencia en redes no lo refleja. Quizá todavía no tienes una marca, o tienes una que se ve bonita pero no transmite la calidad de tu trabajo ni atrae a las clientas correctas.</p>
+        <p class="promesa">Una marca auténtica: que se ve profesional, transmite la calidad de lo que haces y te posiciona con seguridad en tu mercado.</p>
         <div class="f-cta">
           <a class="btn btn-oro" data-apply="Alquimia de Marcas" href="#aplicar">Aplicar a Alquimia de Marcas</a>
-          <a class="mas" href="#alquimia">Ver el proceso completo ↓</a>
         </div>
       </div>
       <div class="aside">
         <h4>Incluye</h4>
         <ul>
-          <li>Carta natal de la fundadora y mapa astral de la marca</li>
-          <li>Estudio de mercado e identificación de tu clienta de alto valor, alineado a tu frecuencia elemental</li>
-          <li>Propuesta de valor diferencial</li>
-          <li>Universo visual completo y manual de identidad de marca</li>
+          <li>Lectura de carta natal de la fundadora y del negocio</li>
+          <li>Estudio de tu mercado y de tu clienta ideal</li>
+          <li>Definición de tu propuesta única y lo que te diferencia</li>
+          <li>Diseño visual completo de tu marca y manual de uso</li>
+          <li>Organización de tus productos o servicios y sus precios (de lo más sencillo a lo más completo)</li>
+          <li>Diseño de tu catálogo o dossier comercial</li>
+          <li>Estrategia y diseño de piezas para el lanzamiento en redes sociales</li>
+          <li>Sesiones individuales con Mimi de liberación y regulación somática</li>
         </ul>
-        <details class="vm light"><summary><span class="a">Ver todo lo que incluye</span><span class="b">Ver menos</span></summary>
-          <ul>
-            <li>Diseño de tu escalera de valor: la estructura de tus productos o servicios, desde la puerta de entrada hasta la experiencia cumbre</li>
-            <li>Maquetación visual de tu catálogo de productos o servicios y dossier comercial</li>
-            <li>Estrategia y narrativa de lanzamiento en redes sociales para la nueva identidad de tu marca</li>
-          </ul>
-        </details>
       </div>
     </article>
+
+    <div class="formato como rv" id="como-trabajamos">
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h3><span class="g">3 meses</span>, <span class="n">12</span> encuentros en dupla y <span class="n">2</span> contenedores de trabajo.</h3>
+      <p class="intro">La mayoría de los procesos de branding empiezan por la estética. Nosotras empezamos por la raíz: primero decodificamos tu propósito y lo que tu negocio vino a materializar; después construimos la arquitectura visual y estratégica que lo comunica.</p>
+      <div class="cols">
+        <div><b>1 · Encuentros estratégicos en dupla (Mimi &amp; Ale)</b><p>Espacio de co-creación donde se maqueta la visión y la arquitectura de tu negocio. Aquí definimos la narrativa, la estrategia de mercado, el mapa astrológico de tu marca y el universo visual que sostendrá tu proyecto.</p></div>
+        <div><b>2 · Sesiones de liberación y regulación somática (exclusivas con Mimi)</b><p>Encuentros individuales diseñados según el ritmo biológico de tu proceso. Trabajamos la reprogramación de patrones, el anclaje somático de cobro y la disolución de bloqueos de visibilidad, dándole a tu sistema nervioso la seguridad para sostener tu nueva realidad financiera.</p></div>
+      </div>
+    </div>
 
     <div class="pduo">
       <article class="pcard rv">
@@ -739,7 +709,7 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
             <li><b>Estructuración y codificación de ofertas:</b> rediseño de tus servicios para que comuniquen su verdadero valor y sostengan precios High Ticket.</li>
             <li><b>Narrativa de posicionamiento:</b> claridad en tu mensaje para conectar de manera orgánica con tus clientas ideales.</li>
             <li><b>Sistemas y presencia digital:</b> optimización de tus canales y uso estratégico de inteligencia artificial a favor de tu tiempo.</li>
-            <li><b>Desbloqueo somático:</b> liberación corporal del miedo a la visibilidad, al juicio y al cobro con soberanía.</li>
+            <li><b>Desbloqueo somático:</b> liberación corporal del miedo a la visibilidad, al juicio y al cobro con seguridad.</li>
             <li><b>Cíclica astrológica de negocios:</b> selección de fechas idóneas y ritmos de expansión y lanzamiento según tu mapa astral.</li>
           </ul>
           <p class="nota">Si durante la consultoría identificamos que necesitas la implementación completa de tu contenedor, te propondremos la transición directa hacia nuestro acompañamiento integral.</p>
@@ -772,76 +742,12 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
   </div>
 </section>
 
-<!-- ALQUIMIA DE MARCAS: PROCESO -->
-<section class="alq hojas hojas-claro" id="alquimia">
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow rv">Acompañamiento 1:1 · 3 meses · 12 sesiones en dupla</p>
-      <h2 class="rv d1">Alquimia de Marcas: el contenedor donde tu medicina se convierte en una Marca Soberana.</h2>
-      <p class="lead rv d2">La mayoría de los procesos de branding empiezan por la estética superficial. Nosotras iniciamos desde la raíz de tu verdad. Primero decodificamos tu propósito y la impronta energética que tu negocio vino a materializar; después construimos la arquitectura visual y estratégica para que se transmita, comunique y venda con total autoridad.</p>
-    </div>
-
-    <ol class="steps">
-      <li class="rv"><span class="n">1</span><div><h4>Tu mapa astrológico y decodificación de campo</h4><p>Leemos la carta natal de la profesional que lidera el proyecto para comprender su canal de expresión natural, e interpretamos el mapa astral del negocio para identificar la frecuencia con la que vino a expandirse y estructurarse.</p></div></li>
-      <li class="rv d1"><span class="n">2</span><div><h4>Las raíces de tu marca y posicionamiento</h4><p>Definimos tu propuesta de valor diferencial, tus pilares de autoridad y la esencia sagrada que sostiene la personalidad de tu proyecto.</p></div></li>
-      <li class="rv"><span class="n">3</span><div><h4>Estudio de mercado y clienta de alto valor</h4><p>Investigamos a fondo tu nicho y diseñamos el perfil de tu clienta ideal, cruzando los datos del mercado con tu frecuencia elemental para identificar el lenguaje exacto que conecta y activa su decisión de compra.</p></div></li>
-      <li class="rv d1"><span class="n">4</span><div><h4>Identidad visual y universo de marca</h4><p>Con los cimientos definidos, creamos el universo gráfico de tu negocio: logotipo, paleta de colores y tipografías, entregándote tu manual de identidad completo para que comuniques con coherencia y serenidad.</p></div></li>
-      <li class="rv"><span class="n">5</span><div><h4>Codificación de ofertas y escalera de valor</h4><p>Estructuramos tu catálogo de productos, servicios y programas, organizando el viaje de tu clienta desde la primera experiencia hasta tu propuesta de más alta transformación. Diseñamos tu dossier comercial, listo para presentar y sostener precios High Ticket.</p></div></li>
-      <li class="rv d1"><span class="n">6</span><div><h4>Estrategia y lanzamiento en redes sociales</h4><p>Diseñamos la narrativa, los guiones y las piezas gráficas para la presentación oficial de tu marca, acompañándote paso a paso en el lanzamiento para que expongas tu nueva imagen con seguridad somática y claridad.</p></div></li>
-    </ol>
-
-    <div class="formato rv">
-      <h3>Estructura del acompañamiento: dos contenedores de trabajo</h3>
-      <div class="cols">
-        <div><b>1 · Encuentros estratégicos en dupla (Mimi &amp; Ale)</b><p>Espacio de co-creación donde se maqueta la visión y la arquitectura de tu negocio. Aquí definimos la narrativa, la estrategia de mercado, el mapa astrológico de tu marca y el universo visual que sostendrá tu proyecto.</p></div>
-        <div><b>2 · Sesiones de liberación y regulación somática (exclusivas con Mimi)</b><p>Encuentros individuales diseñados según el ritmo biológico de tu proceso. Trabajamos la reprogramación de patrones, el anclaje somático de cobro y la disolución de bloqueos de visibilidad, dándole a tu sistema nervioso la seguridad para sostener tu nueva realidad financiera.</p></div>
-      </div>
-    </div>
-
-    <div class="recibes rv">
-      <h3>Lo que recibes al final</h3>
-      <p class="sub-r">El contenedor completo para la expansión de tu Marca Soberana.</p>
-      <ul>
-        <li>Decodificación del mapa astral de tu negocio y frecuencia elemental de expresión</li>
-        <li>Dossier de investigación de mercado y perfil de tu clienta de alto valor</li>
-        <li>Anclaje de propósito, raíces y propuesta de valor diferencial</li>
-        <li>Universo visual completo: logotipo, variaciones, paleta y manual de identidad</li>
-        <li>Codificación de ofertas y escalera de valor: productos y servicios estructurados para sostener precios High Ticket</li>
-        <li>Diseño y maquetación de tu catálogo de productos o servicios / dossier comercial*</li>
-        <li>Estrategia, guiones y piezas gráficas para el lanzamiento oficial en redes sociales</li>
-      </ul>
-      <p class="foot">*El catálogo se adapta a la naturaleza de tu proyecto: acompañamientos 1:1, mentorías, productos físicos o programas digitales.</p>
-    </div>
-
-    <div class="fit">
-      <div class="si rv">
-        <h3>Es para ti si…</h3>
-        <ul>
-          <li>Buscas lanzar tu práctica en el entorno digital con solidez, o ya cuentas con un modelo presencial y estás lista para dar el salto hacia una presencia global.</li>
-          <li>Deseas construir una marca desde la raíz o reestructurar una identidad existente que hoy no refleja la verdadera profundidad ni autoridad de tu medicina (servicios, mentorías, productos o programas).</li>
-          <li>Ya tienes presencia digital, pero tu marca no logra diferenciarse en el mercado ni atraer a la clienta de alto valor con la que deseas colaborar.</li>
-          <li>Reconoces el valor de la inversión consciente, estás dispuesta a mirar tu proceso interno y comprendes que la autorregulación somática es lo que sostiene la expansión de tu negocio.</li>
-        </ul>
-      </div>
-      <div class="no rv d1">
-        <h3>No es para ti si…</h3>
-        <ul>
-          <li>Buscas soluciones genéricas, plantillas prediseñadas o fórmulas de éxito rápido: este es un contenedor de arquitectura a la medida de tu ser.</li>
-          <li>Deseas únicamente un diseño gráfico superficial (logo y paleta de colores) sin realizar el trabajo interno de posicionamiento y alineación.</li>
-          <li>No cuentas con la disponibilidad para priorizar tus encuentros en dupla, sostener tus sesiones somáticas e involucrarte activamente en la evolución de tu marca durante los 3 meses.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="cta-c rv"><a class="btn btn-azul" data-apply="Alquimia de Marcas" href="#aplicar">Aplicar a Alquimia de Marcas</a></div>
-  </div>
-</section>
-
 <!-- CÓMO EMPEZAR -->
 <section class="empezar " id="empezar">
   <div class="wrap">
     <div class="head">
       <p class="eyebrow rv">Cómo empezar</p>
-      <h2 class="rv d1">El camino hacia tu Marca Soberana.</h2>
+      <h2 class="rv d1">El camino hacia tu marca auténtica.</h2>
       <p class="lead rv d2">Un proceso transparente, claro y contundente.</p>
     </div>
     <ol class="jornada">
@@ -859,7 +765,7 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
 <section class="testi hojas dark" id="testimonios">
   <div class="wrap">
     <p class="eyebrow rv">Testimonios</p>
-    <h2 class="rv d1">La experiencia de quienes han transformado su medicina en una Marca Soberana.</h2>
+    <h2 class="rv d1">La experiencia de quienes han transformado su medicina en una marca que las representa.</h2>
 
     <div class="qgrid">
       <article class="quote rv">
@@ -905,7 +811,7 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
   <div class="wrap">
     <div class="head">
       <p class="eyebrow rv">Caso de estudio · Proyecto construido en dupla</p>
-      <h2 class="rv d1">Kronos: la transformación de un don en una Marca Soberana.</h2>
+      <h2 class="rv d1">Kronos: la transformación de un don en una marca con identidad propia.</h2>
       <p class="lead rv d2">Flor creaba jabones artesanales sin una estructura ni universo de marca que los respaldara. Construimos juntas, desde la raíz, la identidad de Kronos: cosmética botánica para un ritual de baño sagrado diseñado para el reencuentro con uno mismo.</p>
     </div>
 
@@ -926,7 +832,7 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
       </div>
       <div class="rv d2">
         <p class="num-lbl">Hoy</p>
-        <h3>Una Marca Soberana lista para su expansión</h3>
+        <h3>Una marca auténtica lista para su expansión</h3>
         <p>Flor reconectó con su autoridad y el poder de su creación. Hoy Kronos cuenta con un universo visual, empaque, presencia digital y narrativa alineada a su frecuencia, lista para posicionarse con dignidad en el mercado.</p>
       </div>
     </div>
@@ -965,6 +871,49 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
   </div>
 </section>
 
+<!-- QUIÉNES SOMOS -->
+<section class="about" id="nosotras">
+  <div class="wrap">
+    <div class="about-intro">
+      <p class="eyebrow rv">Quiénes somos</p>
+      <h2 class="rv d1">Dos miradas, un solo contenedor.</h2>
+      <p class="lead rv d2">Ale diseñó la marca de Mimi; Mimi acompañó a Ale desde la regulación somática y la canalización. De la integración de ambos mundos nació Mujer Alquímica Digital.</p>
+      <p class="lead rv d2" style="margin-top:1.1rem">Al haber vivido desde adentro el trabajo de la otra, entendemos con total certeza que el orden interno es lo que sostiene la estructura de un negocio. Hoy acompañamos a mujeres que ya poseen un don real y buscan construir un negocio sólido y profesional que lo proyecte con claridad.</p>
+    </div>
+
+    <div class="duo">
+      <article class="person rv">
+        <div class="photo">
+          
+          <img src="assets/mimi.jpg" alt="Mimi, terapeuta somática" loading="lazy" />
+          </div>
+        <span class="role">Mundo interno</span>
+        <h3>Mimi</h3>
+        <p>Mentora y terapeuta especializada en regulación somática, Sagrado Femenino y procesos de transformación profunda. Canaliza la información del campo energético, decodifica el mapa astral de la fundadora y su negocio, y sostiene la liberación de memorias y lealtades invisibles en el cuerpo. Su trabajo destraba la raíz biológica que ninguna estrategia digital puede tocar.</p>
+        <p class="anos"><b>+14</b><span>años acompañando procesos de transformación profunda</span></p>
+        <p class="formacion"><span>Formación</span>Facilitadora de Sagrado Femenino Taoísta · Astrología · Diplomado yóguico · Mentora de procesos de vida · Facilitadora somática · Facilitadora de hipnosis cuántica</p>
+      </article>
+
+      <article class="person rv d1">
+        <div class="photo">
+          
+          <img src="assets/ale.jpg" alt="Ale, estratega creativa" loading="lazy" />
+          </div>
+        <span class="role">Mundo externo</span>
+        <h3>Ale</h3>
+        <p>Publicista, diseñadora de marcas y arquitecta digital. Traduce la información canalizada y el orden interno en un contenedor terrenal impecable: identidad visual, páginas de venta y ofertas empaquetadas. Maqueta la trastienda técnica, automatizaciones y sistemas digitales para que tu negocio funcione con orden, elegancia y sostenibilidad.</p>
+        <p class="anos"><b>+15</b><span>años en comunicación y diseño de marca</span></p>
+        <p class="formacion"><span>Formación</span>Magíster en Diseño · Especialista en Comunicaciones Corporativas · Publicista · Marketing de diferenciación y posicionamiento · CRM, embudos y automatizaciones con inteligencia artificial</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="bridge rv">
+    <blockquote>La <em>espiritualidad</em> sin estructura es caos.<br>El <em>marketing</em> sin cuerpo es agotamiento.</blockquote>
+    <cite>— Mimi y Ale</cite>
+  </div>
+</section>
+
 <!-- PREGUNTAS FRECUENTES -->
 <section class="faq-s " id="preguntas">
   <div class="wrap narrow">
@@ -972,6 +921,7 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
     <h2 class="rv d1">Claridad para acompañar tu decisión.</h2>
     <div class="faqs rv">
       <details><summary>¿Para quién están diseñados estos contenedores?</summary><p>Para emprendedoras, mentoras, terapeutas y profesionales que desean lanzar, reestructurar o posicionar su negocio de bienestar en el entorno digital, reconociendo que el orden somático e interno es el verdadero sostén de la estructura comercial.</p></details>
+      <details><summary>¿Alquimia de Marcas es para mí?</summary><p>Es para ti si buscas lanzar tu práctica en el entorno digital con solidez, o reestructurar una identidad que hoy no refleja la profundidad de tu trabajo; si reconoces el valor de la inversión consciente y estás dispuesta a mirar tu proceso interno durante los tres meses. No es para ti si buscas plantillas, fórmulas de éxito rápido o solo un diseño gráfico (logo y paleta) sin el trabajo interno de posicionamiento, ni si no cuentas con la disponibilidad para sostener tus encuentros y sesiones somáticas.</p></details>
       <details><summary>¿Necesito conocimientos previos sobre astrología?</summary><p>No. Mimi interpreta tu mapa natal y la carta de tu negocio, traduciendo cada aspecto astrológico en decisiones estratégicas terrenales, aplicables a tus servicios, precios y comunicación.</p></details>
       <details><summary>¿Qué es la frecuencia elemental?</summary><p>Es la vibración principal de tu proyecto, la que se lee en tu mapa natal. Con ella identificamos el tono, el canal de comunicación y el lenguaje con el que tu marca conecta de la manera más natural.</p></details>
       <details><summary>¿Qué significa canalizar un proceso?</summary><p>Canalizar un proceso es ser el puente para que una intuición o sabiduría abstracta se vuelva una acción, una palabra o una creación real en el mundo físico. No es quedarse «en las nubes»: es hacer que esa energía baje a la tierra y se convierta en algo concreto. Es materializar lo intangible.</p></details>
