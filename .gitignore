@@ -1,6 +1,7 @@
 # Solo se publica la página y sus imágenes. Todo lo demás (catálogo con precios, borradores, versiones, originales) queda local.
 /*
 !/index.html
+!/privacidad.html
 !/assets/
 !/api/
 !/.gitignore
