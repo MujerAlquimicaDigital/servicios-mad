@@ -676,7 +676,7 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
           <li>Estudio de tu mercado y de tu clienta ideal</li>
           <li>Definición de tu propuesta única y lo que te diferencia</li>
           <li>Diseño visual completo de tu marca y manual de uso</li>
-          <li>Organización de tus productos o servicios y sus precios (de lo más sencillo a lo más completo)</li>
+          <li>Organización de tus productos o servicios y sus precios (de lo más sencillo a lo más completo) – escalera de valor</li>
           <li>Diseño de tu catálogo o dossier comercial</li>
           <li>Estrategia y diseño de piezas para el lanzamiento en redes sociales</li>
           <li>Sesiones individuales con Mimi de liberación y regulación somática</li>
@@ -1004,10 +1004,10 @@ footer .legal-f{max-width:640px;margin:0 auto 14px;font-size:.78rem;line-height:
     <div class="ap-ok" id="apOk" aria-live="polite">
       <p class="eyebrow">Recibida</p>
       <h3>Gracias, <span id="apName"></span>.</h3>
-      <p id="apOkMsg">Leemos tu caso con detalle y te escribimos para agendar tu sesión de valoración.</p>
-      <a class="btn btn-azul" id="apBook" href="#" target="_blank" rel="noopener" style="display:none">Agendar mi sesión de valoración gratuita</a>
+      <p id="apOkMsg">Leemos tu caso con detalle. El siguiente paso es coordinar tu sesión de valoración gratuita de 30 minutos: escríbenos por WhatsApp para agendarnos y acordar el horario.</p>
+      <a class="btn btn-azul" id="apBook" href="#" target="_blank" rel="noopener">Escribir por WhatsApp para agendar</a>
     </div>
-    <p class="ap-demo" id="apDemo">MODO PRUEBA: el formulario aún no está conectado a Google, no se guardó nada.</p>
+    <p class="ap-demo" id="apDemo">MODO PRUEBA: el formulario aún no está conectado, no se guardó nada.</p>
   </div>
 </div>
 <div class="lb" id="lb" role="dialog" aria-label="Imagen ampliada"><button aria-label="Cerrar">×</button><img alt="" /></div>
@@ -1039,10 +1039,10 @@ lb.addEventListener('click', () => lb.classList.remove('on'));
 addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
 
 /* ---- Formulario de aplicación ---- */
-// Pegar aquí la URL de la aplicación web de Google (ver apps-script/LEEME.md). Vacío = modo prueba.
-const APPLY_ENDPOINT = '';
-// Enlace para agendar la sesión de valoración de 30 min (Google Calendar o Calendly). Vacío = solo mensaje de gracias.
-const BOOKING_URL = '';
+// Función de Vercel que guarda la aplicación en Brevo y avisa por correo (api/aplicar.js).
+// En local y en GitHub Pages no existe: ahí el formulario funciona en modo prueba y no guarda nada.
+const APPLY_ENDPOINT = '/api/aplicar';
+const APPLY_DEMO = /^(localhost|127\.0\.0\.1|\[::1\])$|\.github\.io$/.test(location.hostname);
 
 const ap = document.getElementById('ap'), apForm = document.getElementById('apply');
 const apErr = document.getElementById('apErr'), apSend = document.getElementById('apSend');
@@ -1071,18 +1071,20 @@ apForm.addEventListener('submit', async e => {
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => { if (q.get(k)) utm[k] = q.get(k); });
   const payload = { ...f, landing_path: location.pathname + (document.referrer ? ' ← ' + document.referrer : ''), utm };
   try {
-    if (APPLY_ENDPOINT) {
-      // text/plain evita el preflight de CORS que Apps Script no soporta; la respuesta es opaca.
-      await fetch(APPLY_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) });
-    } else {
-      console.warn('[aplicación] APPLY_ENDPOINT vacío: modo prueba', payload);
+    if (APPLY_DEMO) {
+      console.warn('[aplicación] modo prueba: no se envía nada', payload);
       document.getElementById('apDemo').style.display = 'block';
+    } else {
+      const r = await fetch(APPLY_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
     }
     document.getElementById('apName').textContent = f.nombre.trim().split(' ')[0];
     document.getElementById('apForm').style.display = 'none';
     document.getElementById('apOk').style.display = 'block';
-    const b = document.getElementById('apBook');
-    if (BOOKING_URL) { b.href = BOOKING_URL; b.style.display = 'inline-flex'; document.getElementById('apOkMsg').textContent = 'Ya puedes elegir el horario de tu sesión de valoración de 30 minutos.'; }
+    // La coordinación de la sesión de valoración se hace por WhatsApp, con el mensaje ya escrito.
+    const caminoTxt = f.camino.split(' (')[0];
+    const quien = 'Hola, mi nombre es ' + f.nombre.trim() + '. ';
+    document.getElementById('apBook').href = waLink(f.camino.startsWith('Todavía') ? quien + 'Acabo de aplicar y quiero coordinar mi sesión de valoración para elegir mi camino.' : quien + 'Acabo de aplicar a ' + caminoTxt + ' y quiero coordinar mi sesión de valoración.');
     apForm.reset();
   } catch (err) {
     apErr.innerHTML = 'No pudimos enviar tu aplicación. Inténtalo de nuevo o escríbenos por <a href="' + waLink('Hola, quiero aplicar pero el formulario falló.') + '" target="_blank" rel="noopener">WhatsApp</a>.';
